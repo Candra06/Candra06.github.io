@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Web</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            color: white;
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        input[type=text], input[type=number], input[type=date], input[type=email], input[type=password]{
+            width: 200px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            padding: 12px;
+            color: rgb(99, 97, 97);
+            border: 1px solid rgb(122, 122, 122);
+            border-radius: 4px; 
+            resize: vertical;
+        }
+        input[type=text]:focus{
+            width: 100%;
+        }
+        input[type=number]:focus{
+            width: 100%;
+        }
+        input[type=date]:focus{
+            width: 100%;
+        }
+        input[type=email]:focus{
+            width: 100%;
+        }
+        input[type=password]:focus{
+            width: 100%;
+        }
+        .form{
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid snow;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 5%;
+            border-radius: 4px;
+            background: #343c414b;
+        }
+      
+        .container{
+            border-radius: 4px;
+            background: linear-gradient(to bottom right, rgb(63, 156, 243) 0%, #03d2ee 100% );
+            padding: 20px; 
+        }
+        .cl-25{
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        .cl-75{
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        label{
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        input[type=submit], input[type=reset]{
+            background-color: rgba(41, 146, 245, 0);
+            color: white;
+            padding: 12px 20px;
+            border: 1px solid white;
+            border-radius: 3px;
+            cursor: pointer;
+            float: left;
+            margin-top: 5%;
+            width: 150px;
+            margin-right: 5px;
+        }
+       
+        input[type=submit]:hover {
+            background-color: #45c2f0;
+        }
+        input[type=reset]:hover{
+            background-color: #45c2f0;
+        }
+        @media screen and (max-width: 600px){
+            .cl-25, .cl-75{
+                width: 100%;
+                margin-top: 0;
+            }
+            input[type=submit], input[type=reset]{
+                margin-top: 5px;
+                width: 100%;
+            }
+            .form{
+                width: 100%;
+
+            }
+        }
+        .contain{
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; 
+        }
+
+        .contain input{
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+        .contain:hover ~ .check{
+            background-color: rgb(22, 214, 221);
+        }
+        .contain input:checked ~ .check{
+            background-color: #036299;
+        }
+        .contain input:checked ~ .check::after{
+            display: block;
+        }
+        .contain .check:after{
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .check{
+            position: absolute;
+            top: -1;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #c2c2c2;
+            
+        }
+        /* ketika diklik dan checkbox button aktif */
+        /* membuat centang di tengah kotak dengan warna putih */
+        .check:after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .rad{
+            position: absolute;
+            top: -1;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #c2c2c2;
+            border-radius: 50%;
+            
+
+        }
+        .rad:after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        /* ketika diklik dan radio button aktif */
+        /* membuat lingkaran di tengah radio button dengan warna putih */
+        .contain .rad:after{
+            left: 5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            
+        }
+        
+        .contain input:checked ~ .rad:after{
+            display: block;
+        }
+        /* membuat lingkaran di tengah radio button dengan background warna biru */
+        .contain input:checked ~ .rad{  
+            background-color: #036299;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form action="next.html" class="form">
+            <h1>Form Input</h1>
+            <div class="row">
+                <div class="cl-25">
+                    <label for="nama">Nama</label>
+                </div>
+                <div class="cl-75">
+                    <input type="text" name="nama" placeholder="Masukkan nama">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="cl-25">
+                    <label for="nim">NIM</label>
+                </div>
+                <div class="cl-75">
+                    <input type="number" name="nim" placeholder="Masukkan NIM">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="cl-25"> 
+                    <label for="gender">Jenis kelamin</label>
+                </div>
+                <div class="cl-75">
+                    <label class="contain"> Laki-laki
+                        <input type="radio" name="gender" value="Laki-laki">
+                        <span class="rad"></span>
+                    </label>
+                    <label class="contain"> Perempuan
+                        <input type="radio" name="gender" value="Perempuan">
+                        <span class="rad"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="cl-25"> 
+                    <label for="hobi">Hobi</label>
+                </div>
+                <div class="cl-75">
+                    <label class="contain"> Makan
+                        <input type="checkbox" name="hobi" value="makan">
+                        <span class="check"></span>
+                    </label>
+
+                    <label class="contain"> Tidur
+                        <input type="checkbox" name="hobi" value="Tidur">
+                        <span class="check"></span>
+                    </label>
+
+                    <label class="contain"> Ngoding
+                        <input type="checkbox" name="hobi" value="Ngoding">
+                        <span class="check"></span>
+                    </label>
+
+                    <label class="contain"> Booceen
+                        <input type="checkbox" name="hobi" value="Booceen">
+                        <span class="check"></span>
+                    </label>
+                    
+                </div>
+            </div>
+                    
+            <div class="row">
+                <div class="cl-25">
+                    <label for="">Tanggal lahir</label><br>
+                </div>
+                <div class="cl-75">
+                    <input type="date" name="tgl_lahir" >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cl-25">
+                    <label for="">Email</label><br>
+                </div>
+                <div class="cl-75">
+                    <input type="email" name="email" placeholder="Masukkan email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cl-25">
+                    <label for="">Password</label><br>
+                    <input type="radio" name="gender" value="laki">Pilihan
+                </div>
+                <div class="cl-75">
+                    <input type="password" name="password" placeholder="Masukkan password">
+                </div>
+            </div>
+            
+            <div class="row">
+                <a href="done.html" ><input type="submit" name="simpan"></a>
+                <input type="reset" name="reset">
+            </div>
+            
+        </form>
+                
+    </div>
+    
+</body>
+</html>
