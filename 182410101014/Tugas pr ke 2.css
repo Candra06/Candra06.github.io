@@ -1,0 +1,21 @@
+h1{
+	font-size: 65px;
+	color: linear-gradient(red , #62a864) ;
+	font-family: cambria; 
+}
+body{
+color: green ;
+background-image: linear-gradient(#a1cfd4, #62a864);
+height: 800px ;
+}
+button{
+color: white ;
+background-color: green ;
+padding: 20px ;
+text-align: center ; 
+text-decoration: none;
+display: inline-block;
+font-size: 16px ;
+margin: 3px 2px;
+
+}
