@@ -1,0 +1,169 @@
+body {
+    margin: auto;
+    background-color: rgb(248, 248, 248);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #4CAF50;
+    position: fixed;
+    padding: 0px;
+    width: 100%;
+    display: inline;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+}
+
+.navbar ul li {
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline;
+}
+
+.navright {
+    float: right;
+    margin-right: 12px;
+    color: white;
+    width: 20%;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.navbar ul li a button {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: white;
+    padding: 8px 24px;
+    font-size: 14px;
+}
+
+.navbar ul li a button:hover {
+    background-color: white;
+    color: #4CAF50;
+    padding: 8px 24px;
+    /* border: 1px solid #4CAF50; */
+    overflow: hidden;
+    position: relative;
+}
+
+li {
+    display: inline;
+}
+
+.navleft {
+    margin-left: 12px;
+    display: inline;
+    float: left;
+    padding: 12px;
+    width: 20%;
+}
+
+
+.navcenter{
+    margin-left: 20px;
+    float: left;
+    width: 50%;
+    padding: 18px;
+    display: inline;
+}
+
+.navcenter input{
+    width: 100%;
+    border-radius: 5px; 
+    border: 1px solid #4CAF50;
+    padding: 8px;
+}
+
+.navcenter a{
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+    width: 50%;
+    height: 40px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: 100%;
+    height: 30px;
+} 
+
+.row{
+    display: grid;
+    clear: both;
+    grid-template-columns: repeat(12, auto);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    padding: 10px 15px;
+}
+
+.col-1{
+    float: left;
+    grid-column: span 1;
+    padding: 5px;
+}
+
+.col-2{
+    float: left;
+    grid-column: span 2;
+    padding: 5px;
+}
+
+.col-3{
+    float: left;
+    grid-column: span 3;
+    padding: 5px;
+}
+
+.col-4{
+    float: left;
+    grid-column: span 4;
+    padding: 5px;
+}
+
+.container{
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto auto auto auto;
+    /* margin-top: 10%; */
+}
+
+.box{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100%;
+    padding: 5px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.box:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.box img{
+    width: 100%;
+    height: 50%;
+    padding: 5px 10px;
+}
+
+.box.rate  > span:before{
+    float: right;
+    overflow: hidden;
+    color: yellow;
+    width: 100%;
+}
