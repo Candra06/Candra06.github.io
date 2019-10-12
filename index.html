@@ -15,6 +15,9 @@
             <div class="logo">
                 <img src="img/logo_kang.png" alt="">
             </div>
+            <div class="">
+
+            </div>
             
         </div>
         <div class="navcenter">
@@ -22,7 +25,7 @@
         </div>
         <div class="navright">
             <ul>
-                <li><a href="">Masuk</a></li>
+                <li><a id="login" style="cursor: pointer;" onclick="showLogin()">Masuk</a></li>
                 <li><a href=""><button>Daftar</button></a></li>
             </ul>
         </div>
@@ -271,5 +274,41 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
     
+    <!-- Modal -->
+    <div id="mdl-login" class="modal" style="display: none;">
+        <div class="mdl-content">
+            <span class="close" name="close">&times;</span><br>
+            <h2>Masuk</h2>
+            <form action="">
+                <label for=""></label><br>
+                <input type="email" class="">
+            </form>
+            <p>Text body</p>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+            var modal = document.getElementById("mdl-login");
+            var show = document.getElementById("login");
+            var span = document.getElementsByName("close")[0];
+        
+        function showLogin() {
+            modal.style.display = "block";
+        }
+        // show.onclick = function(){
+        //     modal.style.display = "block";
+        // }   
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        window.onclick = function(event){
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+    </script>
 </body>
 </html>
