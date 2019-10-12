@@ -1,0 +1,11 @@
+beranda (done)
+login ( abiyyu )
+daftar dan log in form ( rizal )
+keranjang (abiyyu )
+detail barang (rizal )
+sortir kategori (abiyyu)
+checkout -> alamat penerima -> detail checkout ->pilih pembayaran ->detail pembayaran
+(abiyyu)
+akun (rizal)
+progres barang (rizal)
+chat (abiyyu)
