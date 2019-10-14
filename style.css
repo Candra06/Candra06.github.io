@@ -7,6 +7,7 @@ body {
 h2{
     color: #4CAF50;
     font-family: 'poppins';
+    overflow: hidden;
 }
 
 @font-face{
@@ -82,12 +83,19 @@ li {
     width: 20%;
 }
 
+.navleft a{
+    margin-left: 50px;
+    display: inline;
+    color: white;
+    text-decoration: none;
+}
+
 
 .navcenter{
     margin-left: 20px;
     float: left;
     width: 50%;
-    padding: 18px;
+    padding: 10px;
     display: inline;
 }
 
@@ -96,6 +104,7 @@ li {
     border-radius: 5px; 
     border: 1px solid #4CAF50;
     padding: 8px;
+    margin-bottom: 10px;
 }
 
 .navcenter a{
@@ -117,6 +126,7 @@ li {
 
 .row{
     margin: 0 -10px;
+    overflow: hidden;
 }
 
 *{
@@ -134,21 +144,42 @@ li {
 }
 @media only screen and (min-width: 768px){
     .col-1{
-    width: 8.3333%
+        width: 8.333%
     }
     .col-2{
         width: 16.666%;
     }
+    .col-3{
+        width: 24.999%;
+    }
     .col-4{
-        width: 33.333%
+        width: 33.332%;
+    }
+    .col-5{
+        width: 41.666%;
     }
 
     .col-6{
         width: 50%;
     }
 
+    .col-7{
+        width: 58.333%;
+    }
+
     .col-8{
-        width: 66.666%
+        width: 66.6643%
+    }
+    .col-9{
+        width: 74.997%;
+    }
+
+    .col-10{
+        width: 83.333%;
+    }
+
+    .col-11{
+        width: 91.666%;
     }
 
     .col-12{
@@ -161,16 +192,18 @@ li {
     /*padding: 10px;*/
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
 }
 
 .box{
     background-color: white;
+    overflow: hidden;
     border-radius: 5px;
     box-shadow: 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 100%;
+    height: auto;
     padding: 30px 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'poppins';
     font-size: 14px;
     transition: 0.3s;
 }
@@ -183,10 +216,29 @@ li {
     height: 50%;
     padding: 5px 10px;
 }
+.box-login{
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 400px;
+    padding: 30px 10px;
+    font-family: 'poppins';
+    font-size: 14px;
+    transition: 0.3s;
+}
 
 .rate {
     float: right;
     text-align: right;
+    overflow: hidden;
+    color: rgb(255, 251, 0);
+    width: 100%;
+    font-size: 20px;
+}
+
+.rate-detail {
     overflow: hidden;
     color: rgb(255, 251, 0);
     width: 100%;
@@ -238,16 +290,18 @@ li {
 }
 
 .footer{
+    width: 100%;
     margin: 5px;
-    padding: 10px 10px;
+    padding: 20px 20px;
 }
 .footer p {
     color: rgb(173, 173, 173);
+    padding: 10px 10px;
 }
 
 .logo-footer{
     color: #4CAF50;
-    
+    padding: 10px 10px;
 }
 
 .modal{
@@ -280,15 +334,22 @@ li {
 }
 
 .img-gerobak{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     margin: 10px;
     overflow: hidden;
+    padding: 20px 20px 20px 20px;
+}
+
+.img-gerobak img{
+    padding: 30px 30px 20px 20px;
+    width: 100%;
+    height: 100%;
 }
 form{
 padding: 10%;
 border-radius: 4px;
-height: 100%;
+height: 80%;
 font-family: 'poppins';
 }
 
@@ -300,6 +361,17 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     margin-bottom: 5px;
     border-radius: 5px;
     color: rgb(99, 97, 97);
+    border: 1px solid rgb(230, 230, 230);
+}
+.select{
+    width: 100%;
+    height: 3em;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: rgb(99, 97, 97);
+    background-color: #fff;
     border: 1px solid rgb(230, 230, 230);
 }
 .btn-simpan{
@@ -337,4 +409,70 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     width: 100%;
     margin: 10px 10px 10px 10px;
     height: 100%;
+}
+
+.img-detail{
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #888;
+}
+
+.lbl-barang{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.lbl-harga{
+    font-size: 30px;
+    color: #4CAF50;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.detail-produk{
+    width: 100%;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px 10px;
+}
+
+.button-detail{
+    width: 100%;
+    height: 3em;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #4CAF50;
+    background-color: #fff;
+    border: 1px solid #4CAF50;
+}
+.button-detail:hover{
+    background-color: #4CAF50;
+    color: #fff;
+    
+}
+.plus{
+    font-size: 18pt;
+    cursor: pointer;
+    width: 8px;
+    height: 3px;
+    font-weight: bold;
+    padding: 2px 10px;
+    color: #888;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(128,128,128);
+}
+.plus:hover{
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+.round span{
+    position: absolute;
+    top: -7px;
+    left: 2px;
 }

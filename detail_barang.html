@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Kang Sayur</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navleft">
+            <div class="logo">
+                <img src="img/logo_kang.png" alt="">
+            </div>
+            <a  style="cursor: pointer;" onclick="showFilter()">Filter</a>
+            <div class="">
+
+            </div>
+            
+        </div>
+        <div class="navcenter">
+            <input type="text" class="search" placeholder="Cari..">
+        </div>
+        <div class="navright">
+            <ul>
+                <li><a id="login" style="cursor: pointer;" href="masuk.html">Masuk</a></li>
+                <li><a href=""><button>Daftar</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="row">
+            <div class="detail-produk">
+                <div class="col-7">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4" style="overflow: hidden;">
+                                <img src="img/Sayur-Sawi.jpg" class="img-detail" alt="" ><br>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="img/Sayur-Sawi.jpg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-7" >
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label class="lbl-barang">Sawi </label>
+                                    </div>
+                                    <div class="col-8">
+                                        <label class="lbl-harga">Rp. 4.000</label>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="rate-detail" >
+                                            <label for="">&#x2605</label><label for="">&#x2605</label><label for="">&#x2605</label><label for="">&#x2605</label>    
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-12" >
+                                        <label for="" style="color: grey;">250 gr</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" >
+                                        <label for="" style="color: grey; font-weight: bold; font-size: 15px;">Jumlah</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2" >
+                                        <center><span class="plus" id="min">&#45;</span></center>
+                                    </div>
+                                    <div class="col-2" style="border-bottom: 1px solid #888;">
+                                        <center><p style="color: #4CAF50; font-size: 18pt; font-weight: bold; " id="jumlah">1</p></center>
+                                    </div>
+                                    <div class="col-2" >
+                                        <center><span class="plus" id="plus">&#x002B;</span></center>
+                                    </div>
+                                    <div class="col-6" >
+                                        <input type="text" placeholder="Catatan">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="button" class="btn-simpan" value="Beli Sekarang">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="button" class="button-detail" value="Tambah ke Keranjang">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="button" class="button-detail" value="Tanya Penjual">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-5">
+                    <div class="box">
+                        <h2>Deskripsi Produk</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fuga asperiores pariatur eum voluptatum numquam sunt, non autem iure harum ut ullam obcaecati beatae sint ducimus quas ipsum laudantium omnis!</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, maiores laboriosam tenetur magni veniam cumque in consectetur excepturi qui voluptatem. A iste quia delectus nisi reprehenderit temporibus voluptas mollitia doloremque.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis pariatur consectetur esse, harum ducimus iure fugit doloribus deserunt laboriosam reprehenderit, vel nesciunt assumenda. Adipisci tempore praesentium aliquam ad rerum.</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-2">
+                <div class="box">
+                    <img src="img/Sayur-Sawi.jpg" alt="">
+                    <h4>Sawi</h4>
+                    <label for="">Rp. 3000</label><br>
+                    <label for="">Ready</label><br>
+                    <div class="rate" >
+                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="box">
+                    <img src="img/Sayur-Pare.jpg" alt="">
+                    <h4>Pare</h4>
+                    <label for="">Rp. 5000</label><br>
+                    <label for="">Ready</label><br>
+                    <div class="rate" >
+                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="box">
+                    <img src="img/Sayur-Wortel.jpg" alt="">
+                    <h4>Wortel</h4>
+                    <label for="">Rp. 4000</label><br>
+                    <label for="">Ready</label><br>
+                    <div class="rate" >
+                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="box">
+                    <img src="img/Sayur-Sawi.jpg" alt="">
+                    <h4>Sawi</h4>
+                    <label for="">Rp. 3000</label><br>
+                    <label for="">Ready</label><br>
+                    <div class="rate" >
+                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="box">
+                    <img src="img/Sayur-Pare.jpg" alt="">
+                    <h4>Pare</h4>
+                    <label for="">Rp. 5000</label><br>
+                    <label for="">Ready</label><br>
+                    <div class="rate" >
+                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="box">
+                    <img src="img/Sayur-Wortel.jpg" alt="">
+                    <h4>Wortel</h4>
+                    <label for="">Rp. 4000</label><br>
+                    <label for="">Ready</label><br>
+                    <div class="rate" >
+                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <center>
+        <div class="nav-button">
+            <a href="#">Prev</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">Next</a>
+        </div>
+    </center>
+
+   
+    
+    <!-- Modal -->
+    <div id="mdl-login" class="modal" style="display: none;">
+        <div class="mdl-content">
+            <span class="close" name="close">&times;</span><br>
+            <h2>Masuk</h2>
+            <hr>
+            <form action="">
+                <label for="">Email</label><br>
+                <input type="email" class=""><br>
+                <label for="">Password</label><br>
+                <input type="password" name="" id="">
+                <br><br>
+                <input type="submit" class="btn-simpan" name="" id="">
+            </form>
+        </div>+
+
+    </div>
+
+    <div id="mdl-filter" class="modal" style="display: none;">
+            <div class="mdl-content">
+                <span class="close" id="close-modal" name="close">&times;</span><br>
+                <h2>Filter</h2>
+                <hr>
+                <form action="">
+                    <label for="">Kategori</label><br>
+                    <select name="" id="" class="select">
+                        <option value="">Pilih Kategori</option>
+                        <option value="">Buah</option>
+                        <option value="">Sayur</option>
+                    </select>
+                    <label for="">Rentang Harga</label><br>
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="number" name="" id="" placeholder="0">
+                        </div>
+                        <div class="col-2">
+                            <center>
+                                <label for="" style="padding: 5px;">-</label>
+                            </center>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" name="" id="" placeholder="0">
+                        </div>
+                    </div>
+                    
+                    <br><br>
+                    <input type="submit" class="btn-simpan" value="TERAPKAN" name="" id="">
+                </form>
+            </div>
+    
+        </div>
+
+    <script type="text/javascript">
+            var modal = document.getElementById("mdl-login");
+            var show = document.getElementById("login");
+            var span = document.getElementsByName("close")[0];
+            var close = document.getElementById("close-modal");
+            var filter = document.getElementById("mdl-filter");
+            var jumlah = 0;
+            var min = document.getElementById("min");
+            var plus = document.getElementById("plus");
+        
+        function showLogin() {
+            modal.style.display = "block";
+        }
+        function showFilter() {
+            filter.style.display = "block";
+        }
+
+        plus.onclick = function(){
+            jumlah = jumlah + 1;
+            document.getElementById("jumlah").innerHTML = jumlah;
+        }
+        min.onclick = function(){
+            jumlah = jumlah - 1;
+            document.getElementById("jumlah").innerHTML = jumlah;
+        }
+        // show.onclick = function(){
+        //     modal.style.display = "block";
+        // }   
+        span.onclick = function() {
+            modal.style.display = "none";
+            filter.style.display = "none";
+        }
+        close.onclick = function () {
+            filter.style.display = "none";
+        }
+    
+        window.onclick = function(event){
+            if (event.target == modal) {
+                modal.style.display = "none";
+                filter.style.display = "none";
+            }
+        }
+        
+    </script>
+</body>
+<footer>
+        
+
+        <div class="footer">
+            <hr class="dashed">
+            <h3 class="logo-footer">Kang Sayur</h3>
+    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
+        </div>
+</footer>
+</html>
