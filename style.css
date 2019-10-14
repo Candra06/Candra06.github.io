@@ -119,6 +119,9 @@ li {
     margin-bottom: 5px;
 }
 
+.logo a{
+    margin: auto;
+}
 .logo img {
     width: 100%;
     height: 30px;
@@ -222,7 +225,7 @@ li {
     border-radius: 5px;
     box-shadow: 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 400px;
+    height: 500px;
     padding: 30px 10px;
     font-family: 'poppins';
     font-size: 14px;
@@ -475,4 +478,12 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     position: absolute;
     top: -7px;
     left: 2px;
+}
+
+.head-box{
+    color: #888;
+    font-family: 'poppins';
+}
+.head-box h1{
+    color: #4CAF50;
 }
