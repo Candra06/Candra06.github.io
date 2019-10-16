@@ -27,14 +27,14 @@
         <div class="navright">
             <ul>
                 <li><a id="login" style="cursor: pointer;" href="masuk.html">Masuk</a></li>
-                <li><a href=""><button>Daftar</button></a></li>
+                <li><a href="daftar.html"><button>Daftar</button></a></li>
             </ul>
         </div>
     </div>
 
     <div class="main">
         <div class="row">
-            <div class="detail-produk">
+            <div class="detail-produk" id="detail-product" style="display: none;">
                 <div class="col-7">
                     <div class="box">
                         <div class="row">
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-2" >
-                                        <center><span class="plus" id="min">&#45;</span></center>
+                                        <center><span class="plus" id="min"> &#45; </span></center>
                                     </div>
                                     <div class="col-2" style="border-bottom: 1px solid #888;">
                                         <center><p style="color: #4CAF50; font-size: 18pt; font-weight: bold; " id="jumlah">1</p></center>
@@ -120,9 +120,9 @@
             </div>
             
             <div class="col-2">
-                <div class="box">
-                    <img src="img/Sayur-Sawi.jpg" alt="">
-                    <h4>Sawi</h4>
+                <div class="box"  id="box-product">
+                    <img src="img/Sayur-Sawi.jpg" onclick="showProduct()" alt="">
+                    <h4>Sawi Joss</h4>
                     <label for="">Rp. 3000</label><br>
                     <label for="">Ready</label><br>
                     <div class="rate" >
@@ -248,7 +248,7 @@
                         </div>
                         <div class="col-2">
                             <center>
-                                <label for="" style="padding: 5px;">-</label>
+                                <p for="" style="padding: 5px; vertical-align: inherit;">-</p>
                             </center>
                         </div>
                         <div class="col-5">
@@ -272,6 +272,8 @@
             var jumlah = 0;
             var min = document.getElementById("min");
             var plus = document.getElementById("plus");
+            var detail = document.getElementById("detail-product");
+            var box = document.getElementById("box-product");
         
         function showLogin() {
             modal.style.display = "block";
@@ -304,6 +306,10 @@
                 modal.style.display = "none";
                 filter.style.display = "none";
             }
+        }
+
+        function showProduct() {
+            detail.style.display = "block";
         }
         
     </script>
