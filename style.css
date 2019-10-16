@@ -508,3 +508,8 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     margin: 10px 10px;
     cursor: pointer;
 }
+.btn-ubahprofil:hover{
+    background-color: #4CAF50;
+    color: #fff;
+    font-family: 'poppins';
+}
