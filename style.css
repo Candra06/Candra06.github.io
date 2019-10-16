@@ -508,3 +508,82 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     margin: 10px 10px;
     cursor: pointer;
 }
+.keranjang{
+    width: 100%;
+    overflow: hidden;
+    margin: 10px;
+    padding: 15px 15px 15px 15px;
+}
+.contain{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.contain input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.contain:hover ~ .check{
+    background-color: rgb(22, 214, 221);
+}
+.contain input:checked ~ .check{
+    background-color: #4CAF50;
+}
+.contain input:checked ~ .check::after{
+    display: block;
+}
+.contain .check:after{
+    left: 10px;
+    top: 2px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.check{
+    position: absolute;
+    top: -1;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #c2c2c2;
+}
+.check:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.cek{
+    margin: 0px 20px;
+}
+
+.plus-chart{
+    font-size: 12pt;
+    cursor: pointer;
+    width: 2px;
+    height: 3px;
+    font-weight: bold;
+    padding: 1px 8px;
+    color: #888;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(128,128,128);
+}
+
+.plus-chart:hover{
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
