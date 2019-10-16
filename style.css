@@ -508,6 +508,7 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     margin: 10px 10px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 .keranjang{
     width: 100%;
     overflow: hidden;
@@ -586,4 +587,9 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
+}
+.btn-ubahprofil:hover{
+    background-color: #4CAF50;
+    color: #fff;
+    font-family: 'poppins';
 }
