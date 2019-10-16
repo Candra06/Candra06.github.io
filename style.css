@@ -274,6 +274,12 @@ li {
     background-color: #4CAF50;
 }
 
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .nav-button a.active{
     color: #fff;
     /* margin-left: 50%; */
@@ -386,6 +392,7 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     border-radius: 5px;
     background-color: #4CAF50;
     color: #fff;
+    font-family: 'poppins';
     border: 1px solid rgb(230, 230, 230);
 }
 .btn-simpan:hover{
@@ -485,4 +492,19 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
 }
 .head-box h1{
     color: #4CAF50;
+}
+
+.data-diri{
+    padding: 1%;
+}
+.photo-box{
+    /* border: 1px solid #4CAF50; */
+    border-radius: 5px ;
+    height: 100%;
+    padding: 10px 10px;
+    background-color: rgba(201, 201, 201, 0.4);
+}
+.photo-box p {
+    margin: 10px 10px;
+    cursor: pointer;
 }
