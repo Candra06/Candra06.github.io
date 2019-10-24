@@ -15,26 +15,34 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            <a  style="cursor: pointer;" onclick="showFilter()">Filter</a>
+            <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
             <div class="">
 
             </div>
-            
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
-        <div class="navright">
+        <div class="navright profile">
             <ul>
-                <li><a id="login" style="cursor: pointer;" onclick="showLogin()">Masuk</a></li>
-                <li><a href="daftar.html"><button>Daftar</button></a></li>
+                <li>
+                    <a href="#"><button id="profil" class="profile">Profil</button></a>
+                    <div id="toggle" class="toggle">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Nama User</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="main">
         <div class="row">
-                        
+
             <div class="col-2">
                 <a onclick="showProduct()" style="text-decoration: none; color: black;">
                     <div class="box">
@@ -42,20 +50,20 @@
                         <h4>Sawi</h4>
                         <label for="">Rp. 3000</label><br>
                         <label for="">Ready</label><br>
-                        <div class="rate" >
+                        <div class="rate">
                             <label for="">&#x2605</label><label for="">&#x2605</label>
                         </div>
                     </div>
                 </a>
             </div>
-            
+
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
                     <label for="">Rp. 5000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -67,7 +75,7 @@
                     <h4>Wortel</h4>
                     <label for="">Rp. 4000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -79,7 +87,7 @@
                     <h4>Sawi</h4>
                     <label for="">Rp. 3000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -91,7 +99,7 @@
                     <h4>Pare</h4>
                     <label for="">Rp. 5000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -103,7 +111,7 @@
                     <h4>Wortel</h4>
                     <label for="">Rp. 4000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -115,7 +123,7 @@
                     <h4>Wortel</h4>
                     <label for="">Rp. 4000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -127,7 +135,7 @@
                     <h4>Sawi</h4>
                     <label for="">Rp. 3000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -139,7 +147,7 @@
                     <h4>Pare</h4>
                     <label for="">Rp. 5000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -151,7 +159,7 @@
                     <h4>Wortel</h4>
                     <label for="">Rp. 4000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -163,7 +171,7 @@
                     <h4>Sawi</h4>
                     <label for="">Rp. 3000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -175,7 +183,7 @@
                     <h4>Pare</h4>
                     <label for="">Rp. 5000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -187,7 +195,7 @@
                     <h4>Pare</h4>
                     <label for="">Rp. 5000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -199,7 +207,7 @@
                     <h4>Wortel</h4>
                     <label for="">Rp. 4000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -211,7 +219,7 @@
                     <h4>Sawi</h4>
                     <label for="">Rp. 3000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -223,7 +231,7 @@
                     <h4>Pare</h4>
                     <label for="">Rp. 5000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -235,7 +243,7 @@
                     <h4>Wortel</h4>
                     <label for="">Rp. 4000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -247,7 +255,7 @@
                     <h4>Sawi</h4>
                     <label for="">Rp. 3000</label><br>
                     <label for="">Ready</label><br>
-                    <div class="rate" >
+                    <div class="rate">
                         <label for="">&#x2605</label><label for="">&#x2605</label>
                     </div>
                 </div>
@@ -269,10 +277,10 @@
         </div>
     </center>
 
-    
 
-    
-    
+
+
+
     <!-- Modal -->
     <div id="mdl-login" class="modal" style="display: none;">
         <div class="mdl-content">
@@ -317,7 +325,7 @@
                         <input type="number" name="" id="" placeholder="0">
                     </div>
                 </div>
-                
+
                 <br><br>
                 <input type="submit" class="btn-simpan" value="TERAPKAN" name="" id="">
             </form>
@@ -326,40 +334,69 @@
     </div>
 
     <script type="text/javascript">
-            var modal = document.getElementById("mdl-login");
-            var show = document.getElementById("login");
-            var span = document.getElementsByName("close")[0];
-            var filter = document.getElementById("mdl-filter");
-            var close = document.getElementById("close");
-            var detail = document.getElementById("detail-product");
-            var jumlah = 0;
-            var min = document.getElementById("min");
-            var plus = document.getElementById("plus");
-        
+        var modal = document.getElementById("mdl-login");
+        var show = document.getElementById("login");
+        var span = document.getElementsByName("close")[0];
+        var filter = document.getElementById("mdl-filter");
+        var close = document.getElementById("close");
+        var detail = document.getElementById("detail-product");
+        var jumlah = 0;
+        var plus = document.getElementById("plus");
+        var min = document.getElementById("min");
+        var profile = document.getElementById("profil");
+
         function showLogin() {
             modal.style.display = "block";
         }
         function showFilter() {
             filter.style.display = "block";
         }
-        span.onclick = function() {
+        span.onclick = function () {
             modal.style.display = "none";
             filter.style.display = "none";
         }
-        close.onclick = function(){
+        close.onclick = function () {
             filter.style.display = "none";
         }
+        var slideOpen = true;
+var heightChecked = false;
+var initHeight = 0;
+var intval = null;
+        profile.onclick = function () {
+            document.getElementById("toggle").style.display = "block";
+            // window.clearInterval(intval);
+            // var mdiv = document.getElementById('toggle');
+            // if (!heightChecked) {
+            //     initHeight = mdiv.offsetHeight;
+            //     heightChecked = true;
+            // }
+            // if (slideOpen) {
+            //     var h = initHeight;
+            //     slideOpen = false;
+            //     intval = setInterval(function () {
+            //         h--;
+            //         mdiv.style.height = h + 'px';
+            //         if (h <= 0)
+            //             window.clearInterval(intval);
+            //     }, 1
+            //     );
+            // }
+            // else {
+            //     var h = 0;
+            //     slideOpen = true;
+            //     intval = setInterval(function () {
+            //         h++;
+            //         mdiv.style.height = h + 'px';
+            //         if (h >= initHeight)
+            //             window.clearInterval(intval);
+            //     }, 1
+            //     );
+            // }
+        }
 
-        plus.onclick = function(){
-            jumlah = jumlah + 1;
-            document.getElementById("jumlah").innerHTML = jumlah;
-        }
-        min.onclick = function(){
-            jumlah = jumlah - 1;
-            document.getElementById("jumlah").innerHTML = jumlah;
-        }
-    
-        window.onclick = function(event){
+
+
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 filter.style.display = "none";
@@ -375,8 +412,15 @@
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta
+            atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate
+            temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et
+            voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut
+            autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus
+            aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt
+            exercitationem quas natus.</p>
     </div>
 </footer>
+
 </html>

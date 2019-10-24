@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Kang Sayur</title>
 </head>
-
+<a href=""></a>
 <body>
     <div class="navbar">
         <div class="navleft">
@@ -34,7 +34,17 @@
 
     <div class="main">
         <div class="row">
-            <div class="detail-produk" id="detail-product" style="display: none;">
+            <div class="col-12">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Detail Barang</a></li>
+                    <li>Sawi</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="detail-produk" id="detail-product" style="display: block;">
                 <div class="col-7">
                     <div class="box">
                         <div class="row">
@@ -52,7 +62,7 @@
                                     <div class="col-4">
                                         <label class="lbl-barang">Sawi </label>
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-7">
                                         <label class="lbl-harga">Rp. 4.000</label>
                                     </div>
                                 </div>
@@ -108,7 +118,7 @@
                     
                 </div>
                 <div class="col-5">
-                    <div class="box">
+                    <div class="box desc">
                         <h2>Deskripsi Produk</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fuga asperiores pariatur eum voluptatum numquam sunt, non autem iure harum ut ullam obcaecati beatae sint ducimus quas ipsum laudantium omnis!</p>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, maiores laboriosam tenetur magni veniam cumque in consectetur excepturi qui voluptatem. A iste quia delectus nisi reprehenderit temporibus voluptas mollitia doloremque.</p>
@@ -271,6 +281,7 @@
             var filter = document.getElementById("mdl-filter");
             var jumlah = 0;
             var min = document.getElementById("min");
+            var toggle = document.getElementById("toggle");
             var plus = document.getElementById("plus");
             var detail = document.getElementById("detail-product");
             var box = document.getElementById("box-product");
@@ -289,6 +300,9 @@
         min.onclick = function(){
             jumlah = jumlah - 1;
             document.getElementById("jumlah").innerHTML = jumlah;
+        }
+        toggle.onclick = function(){
+            document.getElementById("jumlah").style.display = "block";
         }
         // show.onclick = function(){
         //     modal.style.display = "block";
