@@ -332,7 +332,7 @@ footer p {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 30%;
+    width: 40%;
 }
 
 .close{
@@ -607,4 +607,51 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     overflow: hidden;
     margin: 10px;
     padding: 25px 25px 25px 25px;
+}
+.btn-alamat{
+    width: 100%;
+    height: 3em;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #4CAF50;
+    background-color: #fff;
+    border: 1px solid #888;
+}
+.btn-alamat:hover{
+    width: 100%;
+    height: 3em;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.add-alamat{
+    padding: 3px;
+    border-radius: 4px;
+    height: 80%;
+    font-family: 'poppins';
+}
+textarea{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: rgb(99, 97, 97);
+    border: 1px solid rgb(230, 230, 230);  
+}
+.modal-address{
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }

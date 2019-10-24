@@ -45,6 +45,8 @@
                         <p>08983368286 <span style="color: #4CAF50;">(Alamat Utama)</span></p>
                         <br>
                         <p>Jl. Mastrip No.21 RT.23 RW.8 Kembang Bondowoso Kab. Bondowoso, 68219</p>
+                        <hr>
+                        <button class="btn-alamat" onclick="addAlamat()">pilih alamat lain</button>
                         <hr style="border: 3px solid #c5c5c5a6;">
                         <br>
                         <h3>SMK PP Tegalampel Bondowoso</h3>
@@ -81,7 +83,7 @@
                         </div>
                         <hr>
                         <br>
-                        <button class="btn-simpan">Check Out</button>
+                        <button class="btn-simpan" >Check Out</button>
                     </div>
                     
                 </div>
@@ -90,6 +92,104 @@
             
         </div>
     </div>
+
+
+    <div id="mdl-alamat" class="modal" style="display: none;">
+        <div class="mdl-content">
+            <span class="close" id="close" name="close">&times;</span><br>
+            <h2>Pilih Alamat Pengiriman</h2>
+            <hr>
+            <br>
+            <button class="btn-alamat" onclick="addAlamatPengiriman()">Tambah Alamat Pengiriman</button>
+            <div class="box">
+                        <hr>
+                        <br>
+                        <h2>Markonah</h2>
+                        <p>08983368286 <span style="color: #4CAF50;">(Alamat Utama)</span></p>
+                        <br>
+                        <p>Jl. Mastrip No.21 RT.23 RW.8 Kembang Bondowoso Kab. Bondowoso, 68219</p>
+                        <br> 
+                        <a style="cursor: pointer; color: #4CAF50; " onclick="addAlamatBaru()">Ubah alamat</a>
+            </div>
+        </div>
+    </div>
+    <div id="mdl-alamatbaru" class="modal-address" style="display: none;">
+        <div class="mdl-content">
+            <span class="close" id="close2" name="close">&times;</span><br>
+            <h2>Tambah Alamat Baru</h2>
+            <hr>
+            <br>
+            <form class="add-alamat">
+                      <label>Label Alamat</label><br>
+                      <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap Anda"><br>
+                      <label>Tulis Nama Penerima</label><br>
+                      <input type="text" name="Email" placeholder="Tulis Nama Penerima"><br>
+                      <label>Tulis Nomor Telepon</label><br>
+                      <input type="number" name="number" placeholder="Tulis Nomor Telepon"><br>
+                      <label>Kota / Kecamatan</label><br>
+                      <input type="text" name="Email" placeholder="Tulis Nama Kota / Kecamatan"><br>
+                      <label>Alamat</label><br>
+                      <textarea rows="3" placeholder="si dengan nama jalan, nomor rumah atau nama gedung"></textarea>
+                      <label>Kode Pos</label><br>
+                      <input type="number" name="number" placeholder="Isi Kode Pos"><br>
+                      <div class="row" style="overflow: hidden;">
+                            <div class="col-1">
+                                <div class="cek">
+                                    <label class="contain"> 
+                                        <input type="checkbox">
+                                        <span class="check"></span>
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="col-11">
+                                <p style="padding: 16px 25px 12px 0; display: inline-block; margin-left: 20px;">Jadikan alamat utama</p>
+                            </div>
+                        </div>
+                    <input type="submit" class="btn-simpan" value="SIMPAN" name="" id="">
+                    <button class="btn-alamat">Cancel</button>
+                </form>
+        </div>
+    </div>
+    <div id="mdl-alamatPengiriman" class="modal-address" style="display: none;">
+        <div class="mdl-content">
+            <span class="close" id="close3" name="close">&times;</span><br>
+            <h2>Tambah Alamat Baru</h2>
+            <hr>
+            <br>
+            <form class="add-alamat">
+                      <label>Label Alamat</label><br>
+                      <input type="text" name="Nama Lengkap" value="Rumah"><br>
+                      <label>Tulis Nama Penerima</label><br>
+                      <input type="text" name="Email" value="Nama Pemesan"><br>
+                      <label>Tulis Nomor Telepon</label><br>
+                      <input type="number" name="number" value="08983368286"><br>
+                      <label>Kota / Kecamatan</label><br>
+                      <input type="text" name="Email" value="Bondowoso"><br>
+                      <label>Alamat</label><br>
+                      <textarea rows="3" value="Jl. Mastrip No.21 Kembang bondowoso"></textarea>
+                      <label>Kode Pos</label><br>
+                      <input type="number" name="number" value="68172"><br>
+                      <div class="row" style="overflow: hidden;">
+                            <div class="col-1">
+                                <div class="cek">
+                                    <label class="contain"> 
+                                        <input type="checkbox">
+                                        <span class="check"></span>
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="col-11">
+                                <p style="padding: 16px 25px 12px 0; display: inline-block; margin-left: 20px;">Jadikan alamat utama</p>
+                            </div>
+                        </div>
+                    <input type="submit" class="btn-simpan" value="SIMPAN" name="" id="">
+                    <button class="btn-alamat">Cancel</button>
+                </form>
+        </div>
+    </div>
+
     <footer>
 
         <hr class="dashed">
@@ -100,5 +200,39 @@
     
     </footer>
 </body>
-
 </html>
+<script type="text/javascript">
+    var alamat = document.getElementById('mdl-alamat');
+    var close = document.getElementById('close');
+    var close2 = document.getElementById('close2');
+    var alamatBaru = document.getElementById('mdl-alamatbaru');
+    var alamatPengiriman = document.getElementById('mdl-alamatPengiriman')
+
+    function addAlamat(){
+        alamat.style.display = "block";
+    }
+    function addAlamatBaru(){
+        alamatPengiriman.style.display = "block";
+        alamatBaru.style.display = "block";
+        alamat.style.display = "none";
+    }
+    function AddAlamatPengiriman(){
+        alamatPengiriman.style.display= "block"; 
+    }
+    window.onclick= function(event){
+        if (event.target==alamat){
+            alamat.style.display = "none";
+            alamatBaru.style.display= "none";
+            alamatPengiriman.style.display= "none";
+        }
+    }
+    close.onclick= function(){
+        alamat.style.display = "none";
+        
+    }
+    close2.onclick= function(){
+        alamat.style.display = "block";
+        alamatBaru.style.display= "none";
+        alamatPengiriman.style.display= "none";
+    }
+</script>
