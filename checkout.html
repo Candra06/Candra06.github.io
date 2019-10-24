@@ -34,8 +34,18 @@
 
     <div class="main">
         <div class="row">
+            <div class="col-12">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="keranjang.html">Keranjang</a></li>
+                    <li>Checkout</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="row">
             <div class="checkout">
-                <div class="col-4">
+                <div class="col-8">
                     <div class="box">
                         <h1>Checkout</h1>
                         <h2>Alamat Pengiriman</h2>
@@ -45,14 +55,18 @@
                         <p>08983368286 <span style="color: #4CAF50;">(Alamat Utama)</span></p>
                         <br>
                         <p>Jl. Mastrip No.21 RT.23 RW.8 Kembang Bondowoso Kab. Bondowoso, 68219</p>
+                        <br>
                         <hr>
-                        <button class="btn-alamat" onclick="addAlamat()">pilih alamat lain</button>
+                        <br>
+                        <button class="btn-alamat" onclick="addAlamat()">Pilih alamat lain</button>
+                        <br>
+                        <br>
                         <hr style="border: 3px solid #c5c5c5a6;">
                         <br>
                         <h3>SMK PP Tegalampel Bondowoso</h3>
                         <p>Tanggulangin Sekarputih Bondowoso</p>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-3">
                                 <div class="box">
                                         <img src="img/Sayur-Sawi.jpg" alt="">
                                 </div>
@@ -73,17 +87,25 @@
                         <hr>
                         <div class="detail">
                             <div class="row">
-                                <div class="col-6">
-                                    <p>Total Belanja</p>
+                                <div class="col-7">
+                                    <p>Total Belanja (1 barang)</p>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-5">
                                     <h3 class="harga">Rp. 6.000</h3>
                                 </div>
                             </div>
                         </div>
                         <hr>
+                        <div class="row">
+                                <div class="col-6">
+                                    <p>Total Tagihan</p>
+                                </div>
+                                <div class="col-6">
+                                    <h3 class="harga">Rp. 6.000</h3>
+                                </div>
+                            </div>
                         <br>
-                        <button class="btn-simpan" >Check Out</button>
+                        <button class="btn-simpan" >Pesan</button>
                     </div>
                     
                 </div>
@@ -154,39 +176,38 @@
     <div id="mdl-alamatPengiriman" class="modal-address" style="display: none;">
         <div class="mdl-content">
             <span class="close" id="close3" name="close">&times;</span><br>
-            <h2>Tambah Alamat Baru</h2>
+            <h2>Ubah Alamat</h2>
             <hr>
             <br>
             <form class="add-alamat">
-                      <label>Label Alamat</label><br>
-                      <input type="text" name="Nama Lengkap" value="Rumah"><br>
-                      <label>Tulis Nama Penerima</label><br>
-                      <input type="text" name="Email" value="Nama Pemesan"><br>
-                      <label>Tulis Nomor Telepon</label><br>
-                      <input type="number" name="number" value="08983368286"><br>
-                      <label>Kota / Kecamatan</label><br>
-                      <input type="text" name="Email" value="Bondowoso"><br>
-                      <label>Alamat</label><br>
-                      <textarea rows="3" value="Jl. Mastrip No.21 Kembang bondowoso"></textarea>
-                      <label>Kode Pos</label><br>
-                      <input type="number" name="number" value="68172"><br>
-                      <div class="row" style="overflow: hidden;">
-                            <div class="col-1">
-                                <div class="cek">
-                                    <label class="contain"> 
-                                        <input type="checkbox">
-                                        <span class="check"></span>
-                                    </label>
-                                </div>
-                                
-                            </div>
-                            <div class="col-11">
-                                <p style="padding: 16px 25px 12px 0; display: inline-block; margin-left: 20px;">Jadikan alamat utama</p>
-                            </div>
+                <label>Label Alamat</label><br>
+                <input type="text" name="Nama Lengkap" value="Rumah"><br>
+                <label>Tulis Nama Penerima</label><br>
+                <input type="text" name="Email" value="Nama Pemesan"><br>
+                <label>Tulis Nomor Telepon</label><br>
+                <input type="number" name="number" value="08983368286"><br>
+                <label>Kota / Kecamatan</label><br>
+                <input type="text" name="Email" value="Bondowoso"><br>
+                <label>Alamat</label><br>
+                <textarea rows="3" value="Jl. Mastrip No.21 Kembang bondowoso"></textarea>
+                <label>Kode Pos</label><br>
+                <input type="number" name="number" value="68172"><br>
+                <div class="row" style="overflow: hidden;">
+                    <div class="col-1">
+                        <div class="cek">
+                            <label class="contain"> 
+                                <input type="checkbox">
+                                <span class="check"></span>
+                            </label>
                         </div>
-                    <input type="submit" class="btn-simpan" value="SIMPAN" name="" id="">
-                    <button class="btn-alamat">Cancel</button>
-                </form>
+                    </div>
+                    <div class="col-11">
+                        <p style="padding: 16px 25px 12px 0; display: inline-block; margin-left: 20px;">Jadikan alamat utama</p>
+                    </div>
+                </div>
+                <input type="submit" class="btn-simpan" value="SIMPAN" name="" id="">
+                <button class="btn-alamat">Cancel</button>
+            </form>
         </div>
     </div>
 
@@ -212,12 +233,12 @@
         alamat.style.display = "block";
     }
     function addAlamatBaru(){
-        alamatPengiriman.style.display = "block";
+        alamatPengiriman.style.display = "none";
         alamatBaru.style.display = "block";
         alamat.style.display = "none";
     }
-    function AddAlamatPengiriman(){
-        alamatPengiriman.style.display= "block"; 
+    function addAlamatPengiriman(){
+        alamatBaru.style.display= "block"; 
     }
     window.onclick= function(event){
         if (event.target==alamat){

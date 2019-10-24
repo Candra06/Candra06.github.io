@@ -609,11 +609,41 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     font-family: 'poppins';
 }
 .detail{
-    padding: 20px;
+    padding: 10px;
 }
 .harga{
     float: right;
 }
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+  }
+
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #fff;
+    background: #4CAF50;
+    padding: 2px 2px;
+    border-radius: 3px ;
+  }
 
 .checkout{
     width: 100%;
