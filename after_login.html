@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+
+    </div>
     <div class="navbar">
         <div class="navleft">
             <div class="logo">
@@ -27,11 +30,18 @@
         <div class="navright profile">
             <ul>
                 <li>
-                    <a href="#"><button id="profil" class="profile">Profil</button></a>
+                    <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
                     <div id="toggle" class="toggle">
                         <div class="row">
                             <div class="col-12">
-                                <h5>Nama User</h5>
+                                <div class="box-toggle">
+                                    <h5>Nama User</h5>
+                                </div>
+                                <ul>
+                                    <li class="list">Profil</li>
+                                    <li class="list">Keranjang</li>
+                                    <li class="list">Logout</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -40,43 +50,42 @@
         </div>
     </div>
 
-    <div class="main">
+    <div class="main" id="main">
         <div class="row">
-
             <div class="col-2">
-                <a onclick="showProduct()" style="text-decoration: none; color: black;">
+                <a href="detail_barang.html" style="text-decoration: none; color: black;">
                     <div class="box">
                         <img src="img/Sayur-Sawi.jpg" alt="">
                         <h4>Sawi</h4>
-                        <label for="">Rp. 3000</label><br>
-                        <label for="">Ready</label><br>
-                        <div class="rate">
-                            <label for="">&#x2605</label><label for="">&#x2605</label>
+                        <p>Rp. 3000</p>
+                        <p>Ready</p>
+                        <div class="rate" >
+                            <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                         </div>
                     </div>
                 </a>
             </div>
-
+                
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
-                    <label for="">Rp. 5000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 5000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
-                    <label for="">Rp. 4000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 4000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -85,22 +94,22 @@
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
-                    <label for="">Rp. 3000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 3000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
-                    <label for="">Rp. 5000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 5000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -109,10 +118,10 @@
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
-                    <label for="">Rp. 4000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 4000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -121,10 +130,10 @@
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
-                    <label for="">Rp. 4000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 4000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -133,22 +142,22 @@
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
-                    <label for="">Rp. 3000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 3000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
-                    <label for="">Rp. 5000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 5000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -157,22 +166,22 @@
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
-                    <label for="">Rp. 4000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 4000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
-                    <label for="">Rp. 3000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 3000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -181,22 +190,22 @@
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
-                    <label for="">Rp. 5000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 5000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
-                    <label for="">Rp. 5000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 5000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -205,22 +214,22 @@
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
-                    <label for="">Rp. 4000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 4000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
-                    <label for="">Rp. 3000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 3000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -229,22 +238,22 @@
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
-                    <label for="">Rp. 5000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 5000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
-
+    
             <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
-                    <label for="">Rp. 4000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 4000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -253,10 +262,10 @@
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
-                    <label for="">Rp. 3000</label><br>
-                    <label for="">Ready</label><br>
-                    <div class="rate">
-                        <label for="">&#x2605</label><label for="">&#x2605</label>
+                    <p>Rp. 3000</p>
+                    <p>Ready</p>
+                    <div class="rate" >
+                        <span >&#x2605</span><span>&#x2605</span><span >&#x2605</span><span>&#x2605</span>
                     </div>
                 </div>
             </div>
@@ -344,6 +353,8 @@
         var plus = document.getElementById("plus");
         var min = document.getElementById("min");
         var profile = document.getElementById("profil");
+        var overlay = document.getElementById("overlay");
+        var aktif = document.getElementsByClassName("active");
 
         function showLogin() {
             modal.style.display = "block";
@@ -359,48 +370,26 @@
             filter.style.display = "none";
         }
         var slideOpen = true;
-var heightChecked = false;
-var initHeight = 0;
-var intval = null;
-        profile.onclick = function () {
+        var heightChecked = false;
+        var initHeight = 0;
+        var intval = null;
+        
+        function showtoggle() {
             document.getElementById("toggle").style.display = "block";
-            // window.clearInterval(intval);
-            // var mdiv = document.getElementById('toggle');
-            // if (!heightChecked) {
-            //     initHeight = mdiv.offsetHeight;
-            //     heightChecked = true;
-            // }
-            // if (slideOpen) {
-            //     var h = initHeight;
-            //     slideOpen = false;
-            //     intval = setInterval(function () {
-            //         h--;
-            //         mdiv.style.height = h + 'px';
-            //         if (h <= 0)
-            //             window.clearInterval(intval);
-            //     }, 1
-            //     );
-            // }
-            // else {
-            //     var h = 0;
-            //     slideOpen = true;
-            //     intval = setInterval(function () {
-            //         h++;
-            //         mdiv.style.height = h + 'px';
-            //         if (h >= initHeight)
-            //             window.clearInterval(intval);
-            //     }, 1
-            //     );
-            // }
+            document.getElementById("toggle").style.top = -200;
+            overlay.classList.toggle("active");
         }
-
-
-
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 filter.style.display = "none";
             }
+            
+        }
+        overlay.onclick = function (event) {
+            overlay.classList.remove("active");
+            document.getElementById("toggle").style.display = "none";
+            document.getElementById("toggle").style.top = -200;
         }
         function showProduct() {
             detail.style.display = "block";
