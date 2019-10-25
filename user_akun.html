@@ -8,20 +8,42 @@
     <title>Kang Sayur</title>
 </head>
 <body>
-     <div class="navbar">
+    <div class="overlay" id="overlay">
+
+    </div>
+    <div class="navbar">
         <div class="navleft">
             <div class="logo">
-                <img src="img/logo_kang.png" alt="">
+                <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            
+            <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
+            <div class="">
+
+            </div>
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
-        <div class="navright">
+        <div class="navright profile">
             <ul>
-                <li><a href="">Masuk</a></li>
-                <li><a href=""><button>Daftar</button></a></li>
+                <li>
+                    <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
+                    <div id="toggle" class="toggle">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="box-toggle">
+                                    <h5>Nama User</h5>
+                                </div>
+                                <ul>
+                                    <li class="list">Profil</li>
+                                    <li class="list">Keranjang</li>
+                                    <li class="list">Logout</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -107,8 +129,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-12">
-                                            
-                                            <center><input type="button" value="Ubah Profil" class="btn-ubahprofil" style="width: 50%; margin: auto;"></center>
+                                            <center><input type="button" value="Ubah Profil" class="btn-simpan" style="margin: auto;"></center>
                                         </div>
                                     </div>
                                 </form> 
@@ -121,15 +142,75 @@
     </div>
         
 
+    <script type="text/javascript">
+        var modal = document.getElementById("mdl-login");
+        var show = document.getElementById("login");
+        var span = document.getElementsByName("close")[0];
+        var filter = document.getElementById("mdl-filter");
+        var close = document.getElementById("close");
+        var detail = document.getElementById("detail-product");
+        var jumlah = 0;
+        var plus = document.getElementById("plus");
+        var min = document.getElementById("min");
+        var profile = document.getElementById("profil");
+        var overlay = document.getElementById("overlay");
+        var aktif = document.getElementsByClassName("active");
 
-    <hr class="dashed">
-
-    <div class="footer">
-        <h3 class="logo-footer">Kang Sayur</h3>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
-    </div>
+        function showLogin() {
+            modal.style.display = "block";
+        }
+        function showFilter() {
+            filter.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+            filter.style.display = "none";
+        }
+        close.onclick = function () {
+            filter.style.display = "none";
+        }
+        var slideOpen = true;
+        var heightChecked = false;
+        var initHeight = 0;
+        var intval = null;
+        
+        function showtoggle() {
+            document.getElementById("toggle").style.display = "block";
+            document.getElementById("toggle").style.top = -200;
+            overlay.classList.toggle("active");
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                filter.style.display = "none";
+            }
+            
+        }
+        overlay.onclick = function (event) {
+            overlay.classList.remove("active");
+            document.getElementById("toggle").style.display = "none";
+            document.getElementById("toggle").style.top = -200;
+        }
+        function showProduct() {
+            detail.style.display = "block";
+        }
+    </script>
+    
 
 </body>
+<footer>
+    <div class="footer">
+        <hr class="dashed">
+        <h3 class="logo-footer">Kang Sayur</h3>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta
+            atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate
+            temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et
+            voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut
+            autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus
+            aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt
+            exercitationem quas natus.</p>
+    </div>
+</footer>
 </html>

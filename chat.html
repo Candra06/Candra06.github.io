@@ -8,20 +8,42 @@
     <title>Kang Sayur</title>
 </head>
 <body>
-	 <div class="navbar">
+    <div class="overlay" id="overlay">
+
+    </div>
+    <div class="navbar">
         <div class="navleft">
             <div class="logo">
-                <img src="img/logo_kang.png" alt="">
+                <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            
+            <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
+            <div class="">
+
+            </div>
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
-        <div class="navright">
+        <div class="navright profile">
             <ul>
-                <li><a href="">Masuk</a></li>
-                <li><a href=""><button>Daftar</button></a></li>
+                <li>
+                    <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
+                    <div id="toggle" class="toggle">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="box-toggle">
+                                    <h5>Nama User</h5>
+                                </div>
+                                <ul>
+                                    <li class="list"><a href="akun.html" style="color: #000;">Profil</a></li>
+                                    <li class="list"><a href="keranjang.html" style="color: #000;">Keranjang</a></li>
+                                    <li class="list"><a href="index.html" style="color: #000;">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -98,7 +120,8 @@
                             </div>
                         </div>
                         <div class="col-7" style="border-left: 1px solid #bebebe;">
-                            <img src="img/box.png" style="padding: 50px 50px;width: 50%;height: 50%px;margin: auto;" alt="">
+                            <center><img src="img/packing.png" style="padding: 50px 50px;width: 50%;height: 50%px;margin: auto;" alt=""></center>
+                            <center><h2>Tidak ada Chat</h2></center>
                         </div>
                    </div>
                  
@@ -106,7 +129,89 @@
             </div> 
         </div>   
     </div>
+    
+     <!-- Modal -->
+
+     <div id="mdl-filter" class="modal" style="display: none;">
+        <div class="mdl-content">
+            <span class="close" id="close" name="close">&times;</span><br>
+            <h2>Filter</h2>
+            <hr>
+            <form action="">
+                <label for="">Kategori</label><br>
+                <select name="" id="" class="select">
+                    <option value="">Pilih Kategori</option>
+                    <option value="">Buah</option>
+                    <option value="">Sayur</option>
+                </select>
+                <label for="">Rentang Harga</label><br>
+                <div class="row">
+                    <div class="col-5">
+                        <input type="number" name="" id="" placeholder="0">
+                    </div>
+                    <div class="col-2">
+                        <center>
+                            <label for="" style="padding: 5px;">-</label>
+                        </center>
+                    </div>
+                    <div class="col-5">
+                        <input type="number" name="" id="" placeholder="0">
+                    </div>
+                </div>
+                
+                <br><br>
+                <input type="submit" class="btn-simpan" value="TERAPKAN" name="" id="">
+            </form>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
         
+        var span = document.getElementsByName("close")[0];
+        var filter = document.getElementById("mdl-filter");
+        var close = document.getElementById("close");
+        var detail = document.getElementById("detail-product");
+        var jumlah = 0;
+        var plus = document.getElementById("plus");
+        var min = document.getElementById("min");
+        var profile = document.getElementById("profil");
+        var overlay = document.getElementById("overlay");
+        var aktif = document.getElementsByClassName("active");
+
+        
+        function showFilter() {
+            filter.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+            filter.style.display = "none";
+        }
+        close.onclick = function () {
+            filter.style.display = "none";
+        }
+        
+        function showtoggle() {
+            document.getElementById("toggle").style.display = "block";
+            document.getElementById("toggle").style.top = -200;
+            overlay.classList.toggle("active");
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                filter.style.display = "none";
+            }
+            
+        }
+        overlay.onclick = function (event) {
+            overlay.classList.remove("active");
+            document.getElementById("toggle").style.display = "none";
+            document.getElementById("toggle").style.top = -200;
+        }
+        function showProduct() {
+            detail.style.display = "block";
+        }
+    </script>                                                                                                                                                                                                                                  
 
 </body>
 <footer>
