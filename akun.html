@@ -145,9 +145,10 @@
 			if($("#conf_pass").val() != $("#pass").val()) {
 				// alert('username sudah ada');
 				$("#wrong").css("display","block");
-				// $("#conf_pass").css("border","solid red");
+				$("#conf_pass").css("border-color","red");
 			}else{
-				$("#wrong").css("display","none");
+                $("#wrong").css("display","none");
+                $("#conf_pass").css("border-color","#4CAF50");
 			}
 		});
 	});
