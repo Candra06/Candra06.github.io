@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Kang Sayur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
 	 <div class="navbar">
@@ -102,9 +103,18 @@
                                         <label>Password</label>
                                     </div>
                                         <div class="col-8"> 
-                                        <input type="Password" name="password" placeholder="Password">  
+                                        <input type="Password" id="pass" name="password" placeholder="Password">  
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label>Konfirmasi Password</label>
+                                        </div>
+                                            <div class="col-8"> 
+                                            <input id="conf_pass" type="Password" name="conf_password" placeholder="Password">
+                                            <small style="color: red;display: none;" id="wrong">Password Tidak Sama</small>  
+                                            </div>
+                                        </div>
                                     <div class="row">
                                         <div class="col-12">
                                             <center><input type="button" value="SIMPAN" class="btn-simpan" style="width: 50%; margin: auto;"></center>
@@ -129,4 +139,17 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
 </footer>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#conf_pass").keyup(function(){
+			if($("#conf_pass").val() != $("#pass").val()) {
+				// alert('username sudah ada');
+				$("#wrong").css("display","block");
+				// $("#conf_pass").css("border","solid red");
+			}else{
+				$("#wrong").css("display","none");
+			}
+		});
+	});
+</script>
 </html>
