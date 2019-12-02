@@ -1,18 +1,39 @@
 body {
-    
     background-color: rgb(248, 248, 248);
     font-family: 'poppins';
 }
 
-h2{
+h2 {
     color: #4CAF50;
     font-family: 'poppins';
     overflow: hidden;
 }
 
-@font-face{
+@font-face {
     font-family: 'poppins';
     src: url("font/poppins_regular.otf");
+}
+
+@keyframes animateShow {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 11;
+    }
+}
+
+@keyframes animateHide {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+    to {
+        top: -300px;
+        opacity: 0;
+    }
 }
 
 .navbar {
@@ -32,7 +53,7 @@ h2{
     text-decoration: none;
     margin-right: 20px;
     display: inline;
-    margin-top:12px;
+    margin-top: 12px;
 }
 
 .navright {
@@ -40,17 +61,17 @@ h2{
     margin-right: 12px;
     color: white;
     width: 20%;
-    margin-top:14px;
+    margin-top: 14px;
 }
+
 .navright.profile {
     float: right;
     margin-right: 12px;
     color: white;
     width: 10%;
-    margin-top:14px;
+    margin-top: 14px;
     border: none;
 }
-
 
 .navbar ul li a {
     text-decoration: none;
@@ -81,8 +102,6 @@ h2{
     position: relative;
 }
 
-
-
 li {
     display: inline;
 }
@@ -95,15 +114,14 @@ li {
     width: 20%;
 }
 
-.navleft a{
+.navleft a {
     margin-left: 50px;
     display: inline;
     color: white;
     text-decoration: none;
 }
 
-
-.navcenter{
+.navcenter {
     margin-left: 20px;
     float: left;
     width: 50%;
@@ -111,15 +129,15 @@ li {
     display: inline;
 }
 
-.navcenter input{
+.navcenter input {
     width: 100%;
-    border-radius: 5px; 
+    border-radius: 5px;
     border: 1px solid #4CAF50;
     padding: 8px;
     margin-bottom: 10px;
 }
 
-.navcenter a{
+.navcenter a {
     text-decoration: none;
 }
 
@@ -131,78 +149,76 @@ li {
     margin-bottom: 5px;
 }
 
-.logo a{
+.logo a {
     margin: auto;
 }
+
 .logo img {
     width: 100%;
     height: 30px;
-} 
+}
 
-.row{
+.row {
     margin: 0 -10px;
     overflow: hidden;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing-:border-box;
+    -webkit-box-sizing-: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;;
+    box-sizing: border-box;
+    ;
     font-family: 'poppins';
 }
-[class*='col-']{
+
+[class*='col-'] {
     float: left;
     width: 100%;
     padding: 10px;
 }
-@media only screen and (min-width: 768px){
-    .col-1{
+
+@media only screen and (min-width: 768px) {
+    .col-1 {
         width: 8.333%
     }
-    .col-2{
+    .col-2 {
         width: 16.666%;
     }
-    .col-3{
+    .col-3 {
         width: 24.999%;
     }
-    .col-4{
+    .col-4 {
         width: 33.332%;
     }
-    .col-5{
+    .col-5 {
         width: 41.666%;
     }
-
-    .col-6{
+    .col-6 {
         width: 50%;
     }
-
-    .col-7{
+    .col-7 {
         width: 58.333%;
     }
-
-    .col-8{
+    .col-8 {
         width: 66.6643%
     }
-    .col-9{
+    .col-9 {
         width: 74.997%;
     }
-
-    .col-10{
+    .col-10 {
         width: 83.333%;
     }
-
-    .col-11{
+    .col-11 {
         width: 91.666%;
     }
-
-    .col-12{
+    .col-12 {
         width: 100%;
     }
-
 }
-.main  {
+
+.main {
     /* padding-top:80px; */
     /* margin-left: 25px;
     margin-right: 25px; */
@@ -210,7 +226,7 @@ li {
     width: 100%;
 }
 
-.box{
+.box {
     background-color: white;
     overflow: hidden;
     border-radius: 5px;
@@ -222,19 +238,22 @@ li {
     font-size: 14px;
     transition: 0.3s;
 }
-.box.desc{
+
+.box.desc {
     padding: 25px !important;
 }
-.box:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+.box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.box img{
+.box img {
     width: 100%;
     height: 50%;
     padding: 5px 10px;
 }
-.box-login{
+
+.box-login {
     background-color: white;
     overflow: hidden;
     border-radius: 5px;
@@ -263,24 +282,24 @@ li {
     font-size: 20px;
 }
 
-.nav-button{
+.nav-button {
     display: inline-block;
     margin: 10px 10px 10px;
-   padding: 30px;
+    padding: 30px;
     font-family: 'poppins';
 }
 
-.nav-button a{
+.nav-button a {
     color: #4CAF50;
     /* margin-left: 50%; */
     padding: 8px 16px;
     text-decoration: none;
     border: 1px solid #4CAF50;
     border-radius: 4px;
-    background-color: #fff; 
+    background-color: #fff;
 }
 
-.nav-button a:hover{
+.nav-button a:hover {
     color: #fff;
     /* margin-left: 50%; */
     padding: 8px 16px;
@@ -289,13 +308,13 @@ li {
     background-color: #4CAF50;
 }
 
-label{
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.nav-button a.active{
+.nav-button a.active {
     color: #fff;
     /* margin-left: 50%; */
     padding: 8px 16px;
@@ -305,30 +324,31 @@ label{
     background-color: #4CAF50
 }
 
-.dashed{
+.dashed {
     border: 0 none;
-    border-top: 2px dashed rgb(173, 173, 173); 
+    border-top: 2px dashed rgb(173, 173, 173);
     padding: 5px 5px;
     background: none;
     height: 0;
 }
 
-footer{
+footer {
     width: 100%;
     /* margin: 5px; */
     padding: 20px 20px;
 }
+
 footer p {
     color: rgb(173, 173, 173);
     padding: 10px 10px;
 }
 
-.logo-footer{
+.logo-footer {
     color: #4CAF50;
     padding: 10px 10px;
 }
 
-.modal{
+.modal {
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -337,19 +357,23 @@ footer p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
-.mdl-content{
+.mdl-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 40%;
+    animation-name: animateShow;
+    animation-duration: 3s;
 }
 
-.close{
+.close {
     color: #aaaa;
     float: right;
     font-size: 28px;
@@ -357,7 +381,7 @@ footer p {
     cursor: pointer;
 }
 
-.img-gerobak{
+.img-gerobak {
     width: 80%;
     height: 80%;
     margin: 10px;
@@ -365,19 +389,23 @@ footer p {
     padding: 20px 20px 20px 20px;
 }
 
-.img-gerobak img{
+.img-gerobak img {
     padding: 30px 30px 20px 20px;
     width: 100%;
     height: 100%;
 }
-form{
-padding: 10%;
-border-radius: 4px;
-height: 80%;
-font-family: 'poppins';
+
+form {
+    padding: 10%;
+    border-radius: 4px;
+    height: 80%;
+    font-family: 'poppins';
 }
 
-input[type = text], input[type =number], input[type =email], input[type =password]{
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password] {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -387,7 +415,8 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     color: rgb(99, 97, 97);
     border: 1px solid rgb(230, 230, 230);
 }
-.select{
+
+.select {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -398,7 +427,8 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     background-color: #fff;
     border: 1px solid rgb(230, 230, 230);
 }
-.btn-simpan{
+
+.btn-simpan {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -411,12 +441,14 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     font-family: 'poppins';
     border: 1px solid rgb(230, 230, 230);
 }
-.btn-simpan:hover{
+
+.btn-simpan:hover {
     background-color: #fff;
     border: 1px solid #4CAF50;
     color: #4CAF50;
 }
-.btn-login{
+
+.btn-login {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -427,42 +459,44 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     background-color: #fff;
     border: 1px solid rgb(230, 230, 230);
 }
-.btn-login:hover{
+
+.btn-login:hover {
     background-color: #1e42c7;
     color: #fff;
 }
-.img-foto-profil{
+
+.img-foto-profil {
     width: 100%;
     height: 100%;
 }
 
-.img-detail{
+.img-detail {
     width: 100%;
     height: 100%;
     margin: 10px 10px 10px 10px;
     border: 1px solid #888;
 }
 
-.lbl-barang{
+.lbl-barang {
     font-size: 30px;
     color: black;
     font-weight: bold;
 }
 
-.lbl-harga{
+.lbl-harga {
     font-size: 30px;
     color: #4CAF50;
     font-weight: bold;
 }
 
-.detail-produk{
+.detail-produk {
     width: 100%;
     overflow: hidden;
     margin: 10px;
     padding: 10px 10px;
 }
 
-.button-detail{
+.button-detail {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -473,12 +507,13 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     background-color: #fff;
     border: 1px solid #4CAF50;
 }
-.button-detail:hover{
+
+.button-detail:hover {
     background-color: #4CAF50;
     color: #fff;
-    
 }
-.plus{
+
+.plus {
     font-size: 18pt;
     cursor: pointer;
     width: 8px;
@@ -488,49 +523,55 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     color: #888;
     background-color: transparent;
     border-radius: 50%;
-    border: 2px solid rgb(128,128,128);
+    border: 2px solid rgb(128, 128, 128);
 }
-.plus:hover{
+
+.plus:hover {
     background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
 }
-.round span{
+
+.round span {
     position: absolute;
     top: -7px;
     left: 2px;
 }
 
-.head-box{
+.head-box {
     color: #888;
     font-family: 'poppins';
 }
-.head-box h1{
+
+.head-box h1 {
     color: #4CAF50;
 }
 
-.data-diri{
+.data-diri {
     padding: 1%;
 }
-.photo-box{
+
+.photo-box {
     /* border: 1px solid #4CAF50; */
-    border-radius: 5px ;
+    border-radius: 5px;
     height: 100%;
     padding: 10px 10px;
     background-color: rgba(201, 201, 201, 0.4);
 }
+
 .photo-box p {
     margin: 10px 10px;
     cursor: pointer;
 }
 
-.keranjang{
+.keranjang {
     width: 100%;
     overflow: hidden;
     margin: 10px;
     padding: 15px 15px 15px 15px;
 }
-.contain{
+
+.contain {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -539,25 +580,29 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none;
 }
 
-.contain input{
+.contain input {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
 }
-.contain:hover ~ .check{
+
+.contain:hover~.check {
     background-color: rgb(22, 214, 221);
 }
-.contain input:checked ~ .check{
+
+.contain input:checked~.check {
     background-color: #4CAF50;
 }
-.contain input:checked ~ .check::after{
+
+.contain input:checked~.check::after {
     display: block;
 }
-.contain .check:after{
+
+.contain .check:after {
     left: 10px;
     top: 2px;
     width: 8px;
@@ -568,7 +613,8 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.check{
+
+.check {
     position: absolute;
     top: -1;
     left: 0;
@@ -576,16 +622,18 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     width: 30px;
     background-color: #c2c2c2;
 }
-.check:after{
+
+.check:after {
     content: "";
     position: absolute;
     display: none;
 }
-.cek{
+
+.cek {
     margin: 0px 20px;
 }
 
-.plus-chart{
+.plus-chart {
     font-size: 12pt;
     cursor: pointer;
     width: 2px;
@@ -595,25 +643,28 @@ input[type = text], input[type =number], input[type =email], input[type =passwor
     color: #888;
     background-color: transparent;
     border-radius: 50%;
-    border: 2px solid rgb(128,128,128);
+    border: 2px solid rgb(128, 128, 128);
 }
 
-.plus-chart:hover{
+.plus-chart:hover {
     background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
 }
-.btn-ubahprofil:hover{
+
+.btn-ubahprofil:hover {
     width: 100%;
     height: 3em;
     background-color: #4CAF50;
     color: #fff;
     font-family: 'poppins';
 }
-.detail{
+
+.detail {
     padding: 10px;
 }
-.harga{
+
+.harga {
     float: right;
 }
 
@@ -621,39 +672,45 @@ ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
     background-color: #eee;
-  }
+}
 
-  ul.breadcrumb li {
+ul.breadcrumb li {
     display: inline;
     font-size: 18px;
-  }
-  ul.breadcrumb li+li:before {
+}
+
+ul.breadcrumb li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
-  }
+}
 
-  /* Add a color to all links inside the list */
-  ul.breadcrumb li a {
+
+/* Add a color to all links inside the list */
+
+ul.breadcrumb li a {
     color: #4CAF50;
     text-decoration: none;
-  }
+}
 
-  /* Add a color on mouse-over */
-  ul.breadcrumb li a:hover {
+
+/* Add a color on mouse-over */
+
+ul.breadcrumb li a:hover {
     color: #fff;
     background: #4CAF50;
     padding: 2px 2px;
-    border-radius: 3px ;
-  }
+    border-radius: 3px;
+}
 
-.checkout{
+.checkout {
     width: 100%;
     overflow: hidden;
     margin: 10px;
     padding: 25px 25px 25px 25px;
 }
-.btn-alamat{
+
+.btn-alamat {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -664,7 +721,8 @@ ul.breadcrumb {
     background-color: #fff;
     border: 1px solid #888;
 }
-.btn-alamat:hover{
+
+.btn-alamat:hover {
     width: 100%;
     height: 3em;
     padding: 5px;
@@ -673,22 +731,24 @@ ul.breadcrumb {
     border: 1px solid #4CAF50;
 }
 
-.add-alamat{
+.add-alamat {
     padding: 3px;
     border-radius: 4px;
     height: 80%;
     font-family: 'poppins';
 }
-textarea{
+
+textarea {
     width: 100%;
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
     color: rgb(99, 97, 97);
-    border: 1px solid rgb(230, 230, 230);  
+    border: 1px solid rgb(230, 230, 230);
 }
-.modal-address{
+
+.modal-address {
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -697,11 +757,13 @@ textarea{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
-.toggle{
+.toggle {
     display: none;
     background-color: #fff;
     color: #000;
@@ -710,21 +772,23 @@ textarea{
     right: 8px;
     top: 70px;
     padding: 10px 10px;
-    
 }
-.overlay{
+
+.overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: #000 ;
+    background: #000;
     opacity: 0;
 }
-.overlay.active{
+
+.overlay.active {
     opacity: 0.4;
 }
-.list{
+
+.list {
     background-color: #fff;
     color: #000 !important;
     width: 100%;
@@ -732,7 +796,8 @@ textarea{
     padding: 5px 10px;
     cursor: pointer;
 }
-.list:hover{
+
+.list:hover {
     background-color: #4CAF50;
     color: #fff !important;
     width: 100%;
@@ -742,7 +807,7 @@ textarea{
     cursor: pointer;
 }
 
-.box-toggle{
+.box-toggle {
     background-color: white;
     overflow: hidden;
     border-radius: 5px;
@@ -754,7 +819,8 @@ textarea{
     font-size: 14px;
     transition: 0.3s;
 }
-.lbl-hint{
+
+.lbl-hint {
     padding: 0 !important;
     display: inline-block;
     font-family: 'poppins';
