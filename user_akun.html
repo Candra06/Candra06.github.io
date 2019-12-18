@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Kang Sayur</title>
 </head>
+
 <body>
     <div class="overlay" id="overlay">
 
@@ -16,38 +18,60 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
-            <div class="">
 
+            <div class="filter">
+                <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
             </div>
 
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
-        <div class="navright profile">
-            <ul>
-                <li>
-                    <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
-                    <div id="toggle" class="toggle">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="box-toggle">
-                                    <h5>Nama User</h5>
+        <div class="navright">
+            <div class="bar" onclick="openSidebar()">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <button onclick="showtoggle()" id="profil" class="profile">Profil</button>
+                        <div id="toggle" class="toggle">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-toggle">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <ul>
+                                        <li class="list"><a href="user_akun.html" style="color: black !important;"> Profil</a></li>
+                                        <li class="list">Keranjang</li>
+                                        <li class="list">Logout</li>
+                                    </ul>
                                 </div>
-                                <ul>
-                                    <li class="list">Profil</li>
-                                    <li class="list">Keranjang</li>
-                                    <li class="list">Logout</li>
-                                </ul>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="side-nav">
+            <a href="javascript:void(0)" class="closeSide" onclick="closeSidebar()">&times;</a>
+            <!-- <div class="img-foto-profil"> -->
+            <center>
+                <img class="" src="img/Foto_Profil.png">
+                <h3 style="color: #fff;">Username Saya</h3>
+            </center>
+
+            <!-- </div> -->
+            <a href="akun.html">Profil</a>
+            <a href="keranjang.html">Keranjang</a>
+            <a href="keranjang.html">Filter</a>
+            <a href="indes.html">Logout</a>
         </div>
     </div>
-
     <div class="main">
         <div class="row">
             <div class="col-4">
@@ -73,74 +97,78 @@
                             <p>Logout</p>
                         </div>
                     </div>
-                   
+
                 </div>
-            </div>  
+            </div>
             <div class="col-8">
                 <div class="box">
-                   <div class="row">
+                    <div class="row">
                         <div class="col-12">
                             <h2>Data Diri</h2>
                         </div>
-                   </div>
-                   <div class="row">
+                    </div>
+                    <div class="row">
                         <div class="col-3">
                             <div class="photo-box">
                                 <img src="img/Foto_Profil.png" alt="">
-                                <center><p>Ganti Foto</p></center>
+                                <center>
+                                    <p>Ganti Foto</p>
+                                </center>
                             </div>
                         </div>
                         <div class="col-9">
-                                <form class="data-diri">
-                                    <h2>Lengkapi Data Diri Anda</h2>
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Nama</label>
-                                        </div>  
-                                        <div class="col-8">
-                                                <label>User Akun</label>
-                                        </div>
+                            <form class="data-diri">
+                                <h2>Lengkapi Data Diri Anda</h2>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Nama</label>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Nomor HP</label>
-                                        </div>  
-                                        <div class="col-8">
-                                            <label>089833682xxx</label>
-                                        </div>
+                                    <div class="col-8">
+                                        <label>User Akun</label>
                                     </div>
-                
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Email</label>
-                                        </div>  
-                                        <div class="col-8">
-                                                <label>emailuser@gmail.com</label>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Nomor HP</label>
                                     </div>
-                
-                                    <div class="row">
+                                    <div class="col-8">
+                                        <label>089833682xxx</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <label>emailuser@gmail.com</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <div class="col-2">
                                         <label>Password</label>
                                     </div>
-                                        <div class="col-8"> 
-                                        <label>Ganti password</label>  
-                                        </div>
+                                    <div class="col-8">
+                                        <label>Ganti password</label>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <center><input type="button" value="Ubah Profil" class="btn-simpan" style="margin: auto;"></center>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <center>
+                                            <a href="akun.html"><button class="btn-simpan" style="margin: auto;">Ubah Profil</button></a>
+                                        </center>
                                     </div>
-                                </form> 
+                                </div>
+                            </form>
                         </div>
-                   </div>
-                 
+                    </div>
+
                 </div>
-            </div> 
-        </div>   
+            </div>
+        </div>
     </div>
-        
+
 
     <script type="text/javascript">
         var modal = document.getElementById("mdl-login");
@@ -154,48 +182,44 @@
         var min = document.getElementById("min");
         var profile = document.getElementById("profil");
         var overlay = document.getElementById("overlay");
+        var profil = document.getElementById("overlay");
         var aktif = document.getElementsByClassName("active");
 
         function showLogin() {
             modal.style.display = "block";
         }
+
         function showFilter() {
             filter.style.display = "block";
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-            filter.style.display = "none";
-        }
-        close.onclick = function () {
-            filter.style.display = "none";
         }
         var slideOpen = true;
         var heightChecked = false;
         var initHeight = 0;
         var intval = null;
-        
+
         function showtoggle() {
             document.getElementById("toggle").style.display = "block";
             document.getElementById("toggle").style.top = -200;
             overlay.classList.toggle("active");
         }
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 filter.style.display = "none";
             }
-            
+            document.getElementById("profile").style.display = "none";
         }
-        overlay.onclick = function (event) {
+        overlay.onclick = function(event) {
             overlay.classList.remove("active");
             document.getElementById("toggle").style.display = "none";
             document.getElementById("toggle").style.top = -200;
         }
+
         function showProduct() {
             detail.style.display = "block";
         }
     </script>
-    
+
 
 </body>
 <footer>
@@ -203,14 +227,10 @@
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta
-            atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate
-            temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et
-            voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut
-            autem ipsa voluptates unde laborum amet consectetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus
-            aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt
-            exercitationem quas natus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
 </footer>
+
 </html>

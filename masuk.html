@@ -1,5 +1,6 @@
-</div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,70 +9,88 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Kang Sayur</title>
 </head>
+
 <body>
-   <div class="navbar">
+    <div class="navbar">
         <div class="navleft">
             <div class="logo">
-                    <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
+                <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            
+            <div class="filter">
+                <a style="cursor: pointer;" onclick="showFilter()">Filter</a>
+            </div>
+
+            <div class="">
+
+            </div>
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
+
         <div class="navright">
+            <div class="bar" onclick="bar(this)">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
             <ul>
-                <li><a href="">Masuk</a></li>
-                <li><a href=""><button>Daftar</button></a></li>
+                <li><a id="login" style="cursor: pointer;" onclick="showLogin()">Masuk</a></li>
+                <li><a class="btn-reg" href="daftar.html">Daftar</a></li>
+                <li><a class="li-filter" style="cursor: pointer; display: none;" onclick="showFilter()">Filter</a></li>
             </ul>
         </div>
     </div>
-     <div class="main">
+    <div class="main">
         <div class="row">
             <div class="col-8">
-                    <div class="img-gerobak">
-                        <img src="img/Gerobak_Sayur.png">
-                    </div>
-            </div> 
+                <div class="img-gerobak">
+                    <img src="img/Gerobak_Sayur.png">
+                </div>
+            </div>
             <div class="col-4">
                 <div class="box-login">
                     <div class="head-box">
                         <center>
-                        <h1>Masuk</h1>
-                        <p>Belum punya akun? <a href="daftar.html" style="text-decoration: none; color: #4CAF50 ;">Daftar </a></p>
+                            <h1>Masuk</h1>
+                            <p>Belum punya akun? <a href="daftar.html" style="text-decoration: none; color: #4CAF50 ;">Daftar </a></p>
                         </center>
                     </div>
-                    
-                  <form>
-                      <label>Email/Username</label><br>
-                      <input type="text" name="Email" placeholder="Email/Username"><br>
-                      <label>Password</label><br>
-                      <input type="Password" name="password" id="password" placeholder="Password"><br>
-                      <a href="index_after_login.html"><button class="btn-simpan" id="login" type="button" style="display: none;"> MASUK </button></a><br>
-                      <div class="row">
-                            <div class="col-3">
+
+                    <form>
+                        <label>Email/Username</label><br>
+                        <input type="text" name="Email" placeholder="Email/Username"><br>
+                        <label>Password</label><br>
+                        <input type="Password" name="password" id="password" placeholder="Password"><br>
+                        <a href="index_after_login.html"><button class="btn-simpan" type="button"> MASUK </button></a><br>
+                        <!-- <a href="index_after_login.html"><button class="btn-simpan" id="login" type="button" style="display: none;"> MASUK </button></a><br> -->
+                        <div class="row">
+                            <div class="col-hr-3">
                                 <hr style="margin-top: 10px;">
                             </div>
-                            <div class="col-6">
+                            <div class="col-hr-6">
                                 <center><label style="color: #888;" class="lbl-hint">Atau masuk dengan</label></center>
                             </div>
-                            <div class="col-3">
-                                    <hr style="margin-top: 10px;">
+                            <div class="col-hr-3">
+                                <hr style="margin-top: 10px;">
                             </div>
                         </div>
-                      <button class="btn-login" type="button"> Google </button><br>
-                      <button class="btn-login" type="button"> Facebook </button>
+                        <button class="btn-login" type="button"> Google </button><br>
+                        <button class="btn-login" type="button"> Facebook </button>
 
-                  </form>
+                    </form>
 
                 </div>
-                
+
 
             </div>
 
         </div>
     </div>
-    
+
 </body>
 <footer>
 
@@ -79,15 +98,25 @@
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
 </footer>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("#password").keyup(function(){
+    function bar(x) {
+        x.classList.toggle("change");
+    }
+
+    // jQuery bar animation
+    $(document).ready(function() {
+        $("#password").keyup(function() {
             $("#login").css("display", "block");
         });
+        $(".bar").click(function() {
+            $("ul").slideToggle();
+        })
     });
 </script>
+
 </html>

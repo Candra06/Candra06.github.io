@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#inputan").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#bodimu #rownya").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <center>
+        <hr>
+        <input id="inputan" type="text" placeholder="Cari Apa Aja Deh">
+        <hr>
+        <table border="1">
+            <thead>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Job</th>
+                <th>#</th>
+            </thead>
+            <tbody id="bodimu">
+                <tr id="rownya">
+                    <td>172410101072</td>
+                    <td>Moch Alfian F</td>
+                    <td>Programmer</td>
+                    <td>
+                        <button>detail</button>
+                    </td>
+                </tr>
+                <tr id="rownya">
+                    <td>172410102002</td>
+                    <td>Fahmi Fayyad</td>
+                    <td>Programmer</td>
+                    <td>
+                        <button>detail</button>
+                    </td>
+                </tr>
+                <tr id="rownya">
+                    <td>172410101142</td>
+                    <td>sikonyol</td>
+                    <td>tukang toxic</td>
+                    <td>
+                        <button>detail</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+
+</html>

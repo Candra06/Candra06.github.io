@@ -6,31 +6,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Kang Sayur</title>
+    <script type="text/javascript">
+        $(function() {
+            ajaxJS();
+
+            function ajaxJS(e) {
+                if (e) {
+                    e.preventDefault();
+                }
+                $.ajax({
+                    url: "https://raw.githubusercontent.com/Candra06/PenjualanDaging/master/data.json",
+                    method: "GET",
+                    success: function(data) {
+                        data = jQuery.parseJSON(data);
+                        var html_to_append = '';
+                        $.each(data, function(i, item) {
+                            html_to_append +=
+                                '<hr style="border: 3px solid #c5c5c5a6;">' +
+                                '<div class="row" >' +
+                                '<div class="col-1">' +
+                                '<div class="cek">' +
+                                '<label class="contain"> ' +
+                                '<input type="checkbox" name="hobi" value="Tidur">' +
+                                '<span class="check"></span>' +
+                                '</label>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="col-3">' +
+                                '<img src="' + item.Foto + '" alt="">' +
+                                '</div>' +
+                                '<div class="col-4">' +
+                                '<h2 style="color: rgb(32, 32, 32);">' + item.Nama + '</h2>' +
+                                '<h2>Rp. ' + item.Harga + '</h2>' +
+                                '</div>' +
+                                '<div class="col-4 col-s-4">' +
+                                '<div class="row">' +
+                                '<div class="col-2 col-s-2">' +
+                                '<center><span class="plus-chart" id="min"> &#45; </span></center>' +
+                                '</div>' +
+                                '<div class="col-2 col-s-2" style="border-bottom: 1px solid #888; margin-left: 4px;">' +
+                                '<center>' +
+                                '<p style="color: #4CAF50; font-size: 12pt; font-weight: bold; " id="jumlah">1</p>' +
+                                '</center>' +
+                                '</div>' +
+                                '<div class="col-2 col-s-2">' +
+                                '<center><span class="plus-chart" id="plus">&#x002B;</span></center>' +
+                                '</div>' +
+
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+                        });
+                        $("#tempat-display").html(html_to_append);
+                    },
+                    error: function() {
+                        console.log("eror");
+                    }
+                });
+
+            }
+
+        });
+    </script>
 </head>
 
 <body>
     <div class="navbar">
         <div class="navleft">
             <div class="logo">
-                    <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
+                <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            <a  style="cursor: pointer;" onclick="showFilter()">Filter</a>
-            <div class="">
 
+            <div class="filter">
+                <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
             </div>
-            
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
-        <div class="navright">
-            <ul>
-                <li><a id="login" style="cursor: pointer;" href="masuk.html">Masuk</a></li>
-                <li><a href="daftar.html"><button>Daftar</button></a></li>
-            </ul>
+        <div class="navright profile">
+            <div class="bar" onclick="openSidebar()">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
+                        <div id="toggle" class="toggle">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-toggle">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <ul>
+                                        <li class="list"><a href="user_akun.html"> Profil</a></li>
+                                        <li class="list">Keranjang</li>
+                                        <li class="list">Logout</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="side-nav">
+            <a href="javascript:void(0)" class="closeSide" onclick="closeSidebar()">&times;</a>
+            <!-- <div class="img-foto-profil"> -->
+            <center>
+                <img class="" src="img/Foto_Profil.png">
+                <h3 style="color: #fff;">Username Saya</h3>
+            </center>
+
+            <!-- </div> -->
+            <a href="akun.html">Profil</a>
+            <a href="keranjang.html">Keranjang</a>
+            <a href="keranjang.html">Filter</a>
+            <a href="indes.html">Logout</a>
         </div>
     </div>
+
 
     <div class="main">
         <div class="row">
@@ -40,7 +142,7 @@
                     <li>Keranjang</li>
                 </ul>
             </div>
-            
+
         </div>
         <div class="row">
             <div class="keranjang" id="detail-product">
@@ -54,79 +156,18 @@
                                         <span class="check"></span>
                                     </label>
                                 </div>
-                                
+
                             </div>
-                            <div class="col-5">
+                            <div class="col-5 col-s-5">
                                 <p style="padding: 16px 12px 12px 0; display: inline-block;">Pilih Semua produk</p>
                             </div>
                         </div>
+
+
                         <hr style="border: 3px solid #c5c5c5a6;">
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="cek">
-                                    <label class="contain"> 
-                                        <input type="checkbox" name="hobi" value="Tidur">
-                                        <span class="check"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <img src="img/Sayur-Sawi.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <h2 style="color: rgb(32, 32, 32);">Sawi</h2>
-                                <h2>Rp. 4.000</h2>
-                            </div>
-                            <div class="col-4">
-                                <div class="row">
-                                    <div class="col-2" >
-                                        <center><span class="plus-chart" id="min"> &#45; </span></center>
-                                    </div>
-                                    <div class="col-2" style="border-bottom: 1px solid #888; margin-left: 4px;">
-                                        <center><p style="color: #4CAF50; font-size: 12pt; font-weight: bold; " id="jumlah">1</p></center>
-                                    </div>
-                                    <div class="col-2" >
-                                        <center><span class="plus-chart" id="plus">&#x002B;</span></center>
-                                    </div>
-                                 
-                                </div>
-                            </div>
-                        </div>
-                        <hr style="border: 3px solid #c5c5c5a6;">
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="cek">
-                                    <label class="contain"> 
-                                        <input type="checkbox" name="hobi" value="Tidur">
-                                        <span class="check"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <img src="img/Sayur-Sawi.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <h2 style="color: rgb(32, 32, 32);">Sawi</h2>
-                                <h2>Rp. 4.000</h2>
-                            </div>
-                            <div class="col-4">
-                                <div class="row">
-                                    <div class="col-2" >
-                                        <center><span class="plus-chart" id="min"> &#45; </span></center>
-                                    </div>
-                                    <div class="col-2" style="border-bottom: 1px solid #888; margin-left: 4px;">
-                                        <center><p style="color: #4CAF50; font-size: 12pt; font-weight: bold; " id="jumlah">1</p></center>
-                                    </div>
-                                    <div class="col-2" >
-                                        <center><span class="plus-chart" id="plus">&#x002B;</span></center>
-                                    </div>
-                                 
-                                </div>
-                            </div>
-                        </div>
-                        <hr style="border: 3px solid #c5c5c5a6;">
+                        <div id="tempat-display"></div>
                     </div>
-                    
+
                 </div>
                 <div class="col-5">
                     <div class="box" style="padding: 25px 25px;">
@@ -147,22 +188,33 @@
                         <br>
                         <button class="btn-simpan">Check Out</button>
                     </div>
-                    
+
                 </div>
             </div>
-            
-            
+
+
         </div>
     </div>
     <footer>
 
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
-    
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
-    
+
     </footer>
 </body>
+
+<script type="text/javascript">
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "300px";
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
 
 </html>

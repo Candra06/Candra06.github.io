@@ -8,16 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Kang Sayur</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#search").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#row #data").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -36,7 +26,7 @@
 
         </div>
         <div class="navcenter">
-            <input type="text" id="search" class="search" placeholder="Cari..">
+            <input type="text" class="search" placeholder="Cari..">
         </div>
 
         <div class="navright">
@@ -49,16 +39,15 @@
             </div>
             <ul>
                 <li><a id="login" style="cursor: pointer;" onclick="showLogin()">Masuk</a></li>
-                <li><a class="btn-reg" href="daftar.html">Daftar</a></li>
-                <li><a class="li-filter" style="cursor: pointer; display: none;" onclick="showFilter()">Filter</a></li>
+                <li><a href="daftar.html"><button>Daftar</button></a></li>
             </ul>
         </div>
     </div>
 
     <div class="main">
-        <div class="row" id="row">
+        <div class="row">
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <a href="detail_barang.html" style="text-decoration: none; color: black;">
                     <div class="box">
                         <img src="img/Sayur-Sawi.jpg" alt="">
@@ -72,7 +61,7 @@
                 </a>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2" id="pare">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
@@ -83,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
@@ -95,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
@@ -107,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
@@ -119,7 +108,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
@@ -131,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
@@ -143,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
@@ -155,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
@@ -167,7 +156,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
@@ -179,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
@@ -191,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
@@ -203,7 +192,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
@@ -215,7 +204,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
@@ -227,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
@@ -239,7 +228,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Pare.jpg" alt="">
                     <h4>Pare</h4>
@@ -251,7 +240,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Wortel.jpg" alt="">
                     <h4>Wortel</h4>
@@ -263,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="data">
+            <div class="col-2">
                 <div class="box">
                     <img src="img/Sayur-Sawi.jpg" alt="">
                     <h4>Sawi</h4>
@@ -377,6 +366,15 @@
         }
         close.onclick = function() {
             filter.style.display = "none";
+        }
+
+        plus.onclick = function() {
+            jumlah = jumlah + 1;
+            document.getElementById("jumlah").innerHTML = jumlah;
+        }
+        min.onclick = function() {
+            jumlah = jumlah - 1;
+            document.getElementById("jumlah").innerHTML = jumlah;
         }
 
         window.onclick = function(event) {

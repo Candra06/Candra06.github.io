@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,68 @@
     <title>Kang Sayur</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
+
 <body>
-	 <div class="navbar">
+    <div class="navbar">
         <div class="navleft">
             <div class="logo">
-                <img src="img/logo_kang.png" alt="">
+                <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            
+
+            <div class="filter">
+                <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
+            </div>
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
         <div class="navright">
-            <ul>
-                <li><a href="">Masuk</a></li>
-                <li><a href=""><button>Daftar</button></a></li>
-            </ul>
+            <div class="bar" onclick="openSidebar()">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <button onclick="showtoggle()" id="profil" class="profile">Profil</button>
+                        <div id="toggle" class="toggle">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-toggle">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <ul>
+                                        <li class="list"><a href="user_akun.html"> Profil</a></li>
+                                        <li class="list">Keranjang</li>
+                                        <li class="list">Logout</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="side-nav">
+            <a href="javascript:void(0)" class="closeSide" onclick="closeSidebar()">&times;</a>
+            <!-- <div class="img-foto-profil"> -->
+            <center>
+                <img class="" src="img/Foto_Profil.png">
+                <h3 style="color: #fff;">Username Saya</h3>
+            </center>
+
+            <!-- </div> -->
+            <a href="akun.html">Profil</a>
+            <a href="keranjang.html">Keranjang</a>
+            <a href="keranjang.html">Filter</a>
+            <a href="indes.html">Logout</a>
         </div>
     </div>
+
 
     <div class="main">
         <div class="row">
@@ -52,81 +97,83 @@
                             <p>Logout</p>
                         </div>
                     </div>
-                   
+
                 </div>
-            </div>  
+            </div>
             <div class="col-9">
                 <div class="box">
-                   <div class="row">
+                    <div class="row">
                         <div class="col-12">
                             <h2>Data Diri</h2>
                         </div>
-                   </div>
-                   <div class="row">
+                    </div>
+                    <div class="row">
                         <div class="col-3">
                             <div class="photo-box">
                                 <img src="img/Foto_Profil.png" alt="">
-                                <center><p>Ganti Foto</p></center>
+                                <center>
+                                    <p>Ganti Foto</p>
+                                </center>
                             </div>
                         </div>
                         <div class="col-9">
-                                <form class="data-diri">
-                                    <h2>Lengkapi Data Diri Anda</h2>
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Nama</label>
-                                        </div>  
-                                        <div class="col-8">
-                                                <input type="text" placeholder="Nama Lengkap">
-                                        </div>
+                            <form class="data-diri">
+                                <h2>Lengkapi Data Diri Anda</h2>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Nama</label>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Nomor HP</label>
-                                        </div>  
-                                        <div class="col-8">
-                                            <input type="number" name="number" placeholder="Nomor HP">
-                                        </div>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="Nama Lengkap">
                                     </div>
-                
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Email</label>
-                                        </div>  
-                                        <div class="col-8">
-                                                <input type="Email" name="Email" placeholder="Email ex:user@mail.com">
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Nomor HP</label>
                                     </div>
-                
-                                    <div class="row">
+                                    <div class="col-8">
+                                        <input type="number" name="number" placeholder="Nomor HP">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="Email" name="Email" placeholder="Email ex:user@mail.com">
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <div class="col-2">
                                         <label>Password</label>
                                     </div>
-                                        <div class="col-8"> 
-                                        <input type="Password" id="pass" name="password" placeholder="Password">  
-                                        </div>
+                                    <div class="col-8">
+                                        <input type="Password" id="pass" name="password" placeholder="Password">
                                     </div>
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label>Konfirmasi Password</label>
-                                        </div>
-                                            <div class="col-8"> 
-                                            <input id="conf_pass" type="Password" name="conf_password" placeholder="Password">
-                                            <small style="color: red;display: none;" id="wrong">Password Tidak Sama</small>  
-                                            </div>
-                                        </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <center><input type="button" value="SIMPAN" class="btn-simpan" style="width: 50%; margin: auto;"></center>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>Konfirmasi Password</label>
                                     </div>
-                                </form> 
+                                    <div class="col-8">
+                                        <input id="conf_pass" type="Password" name="conf_password" placeholder="Password">
+                                        <small style="color: red;display: none;" id="wrong">Password Tidak Sama</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <center><input type="button" value="SIMPAN" class="btn-simpan" style="width: 50%; margin: auto;"></center>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                   </div>
-                 
+                    </div>
+
                 </div>
-            </div> 
-        </div>   
+            </div>
+        </div>
     </div>
 
 </body>
@@ -135,22 +182,32 @@
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
 </footer>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$("#conf_pass").keyup(function(){
-			if($("#conf_pass").val() != $("#pass").val()) {
-				// alert('username sudah ada');
-				$("#wrong").css("display","block");
-				$("#conf_pass").css("border-color","red");
-			}else{
-                $("#wrong").css("display","none");
-                $("#conf_pass").css("border-color","#4CAF50");
-			}
-		});
-	});
+    $(document).ready(function() {
+        $("#conf_pass").keyup(function() {
+            if ($("#conf_pass").val() != $("#pass").val()) {
+                // alert('username sudah ada');
+                $("#wrong").css("display", "block");
+                $("#conf_pass").css("border-color", "red");
+            } else {
+                $("#wrong").css("display", "none");
+                $("#conf_pass").css("border-color", "#4CAF50");
+            }
+        });
+    });
+
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "300px";
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+    }
 </script>
+
 </html>

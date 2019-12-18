@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Kang Sayur</title>
 </head>
+
 <body>
-	 <div class="navbar">
+    <div class="navbar">
         <div class="navleft">
             <div class="logo">
                 <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            
+            <div class="filter">
+                <a style="cursor: pointer;" onclick="showFilter()">Filter</a>
+            </div>
+
+            <div class="">
+
+            </div>
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
+
         <div class="navright">
+            <div class="bar" onclick="bar(this)">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
             <ul>
-                <li><a href="">Masuk</a></li>
-                <li><a href=""><button>Daftar</button></a></li>
+                <li><a id="login" style="cursor: pointer;" onclick="showLogin()">Masuk</a></li>
+                <li><a class="btn-reg" href="daftar.html">Daftar</a></li>
+                <li><a class="li-filter" style="cursor: pointer; display: none;" onclick="showFilter()">Filter</a></li>
             </ul>
         </div>
     </div>
-     <div class="main">
+    <div class="main">
         <div class="row">
             <div class="col-8">
-                    <div class="img-gerobak">
-                        <img src="img/Gerobak_Sayur.png">
-                    </div>
-            </div> 
+                <div class="img-gerobak">
+                    <img src="img/Gerobak_Sayur.png">
+                </div>
+            </div>
             <div class="col-4">
                 <div class="box">
 
@@ -41,32 +60,36 @@
                             <p>Sudaf punya akun? <a href="masuk.html" style="text-decoration: none; color: #4CAF50 ;">Masuk </a></p>
                         </center>
                     </div>
-                        
-                  <form>
-                      <label>Nama Lengkap</label><br>
-                      <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap Anda"><br>
-                      <label>Email/Username</label><br>
-                      <input type="text" name="Email" placeholder="Contoh@guide.com"><br>
-                      <label>Password</label><br>
-                      <input type="Password" name="password" placeholder="Password"><br>
-                      <label>Nomor HP</label><br>
-                      <input type="number" name="number" placeholder="Nomor HP anda"><br>
-                      <button class="btn-simpan" type="button"> SIMPAN </button><br>
-                      <div class="row">
-                        <div class="col-3">
-                            <hr style="margin-top: 10px;">
-                        </div>
-                        <div class="col-6">
-                            <center><label style="color: #888;" class="lbl-hint">Atau daftar dengan</label></center>
-                        </div>
-                        <div class="col-3">
-                                <hr style="margin-top: 10px;">
-                        </div>
-                      </div>
-                      <button class="btn-login" type="button"> Google </button><br>
-                      <button class="btn-login" type="button"> Facebook </button>
 
-                  </form>
+                    <form action="">
+                        <label>Nama Lengkap</label><br>
+                        <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap Anda" required><br>
+                        <label>Email/Username</label><br>
+                        <input type="text" name="Email" placeholder="Contoh@guide.com" required><br>
+                        <label>Password</label><br>
+                        <input type="Password" name="password" id="pass" placeholder="Password" required><br>
+                        <label>Konfirmasi Password</label><br>
+                        <input type="Password" name="password" id="confirm_pass" placeholder="Konfirmasi Password" required><br>
+                        <small style="color: red;display: none;" id="wrong">Password Tidak Sama</small><br>
+                        <label>Nomor HP</label><br>
+                        <input type="number" name="number" placeholder="Nomor HP anda" required><br>
+                        <input type="submit" class="btn-simpan" value="SIMPAN">
+
+                        <div class="row">
+                            <div class="col-hr-3">
+                                <hr style="margin-top: 10px;">
+                            </div>
+                            <div class="col-hr-6">
+                                <center><label style="color: #888;" class="lbl-hint">Atau daftar dengan</label></center>
+                            </div>
+                            <div class="col-hr-3">
+                                <hr style="margin-top: 10px;">
+                            </div>
+                        </div>
+                        <button class="btn-login" type="button"> Google </button><br>
+                        <button class="btn-login" type="button"> Facebook </button>
+
+                    </form>
                 </div>
             </div>
 
@@ -79,8 +102,30 @@
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
 </footer>
+<script type="text/javascript">
+    function bar(x) {
+        x.classList.toggle("change");
+    }
+
+    $(document).ready(function() {
+        $(".bar").click(function() {
+            $("ul").slideToggle();
+        });
+        $("#confirm_pass").keyup(function() {
+            if ($("#confirm_pass").val() != $("#pass").val()) {
+                $("#wrong").css("display", "block");
+                $("#confirm_pass").css("border", "3px solid red")
+            } else {
+                $("#wrong").css("display", "none");
+                $("#confirm_pass").css("border", "1px solid rgb(230, 230, 230)")
+            }
+        });
+    });
+</script>
+
 </html>

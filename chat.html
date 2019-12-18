@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Kang Sayur</title>
 </head>
+
 <body>
     <div class="overlay" id="overlay">
 
@@ -16,37 +18,61 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
-            <div class="">
 
+            <div class="filter">
+                <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
             </div>
 
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
-        <div class="navright profile">
-            <ul>
-                <li>
-                    <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
-                    <div id="toggle" class="toggle">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="box-toggle">
-                                    <h5>Nama User</h5>
+        <div class="navright">
+            <div class="bar" onclick="openSidebar()">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <button onclick="showtoggle()" id="profil" class="profile">Profil</button>
+                        <div id="toggle" class="toggle">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-toggle">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <ul>
+                                        <li class="list"><a href="user_akun.html" style="color: black !important;"> Profil</a></li>
+                                        <li class="list">Keranjang</li>
+                                        <li class="list">Logout</li>
+                                    </ul>
                                 </div>
-                                <ul>
-                                    <li class="list"><a href="akun.html" style="color: #000;">Profil</a></li>
-                                    <li class="list"><a href="keranjang.html" style="color: #000;">Keranjang</a></li>
-                                    <li class="list"><a href="index.html" style="color: #000;">Logout</a></li>
-                                </ul>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="side-nav">
+            <a href="javascript:void(0)" class="closeSide" onclick="closeSidebar()">&times;</a>
+            <!-- <div class="img-foto-profil"> -->
+            <center>
+                <img class="" src="img/Foto_Profil.png">
+                <h3 style="color: #fff;">Username Saya</h3>
+            </center>
+
+            <!-- </div> -->
+            <a href="akun.html">Profil</a>
+            <a href="keranjang.html">Keranjang</a>
+            <a href="keranjang.html">Filter</a>
+            <a href="indes.html">Logout</a>
         </div>
     </div>
+
 
     <div class="main">
         <div class="row">
@@ -73,19 +99,19 @@
                             <p>Logout</p>
                         </div>
                     </div>
-                   
+
                 </div>
-            </div>  
+            </div>
             <div class="col-9">
                 <div class="box" style="padding: 25px;">
-                   
-                   <div class="row">
+
+                    <div class="row">
                         <div class="col-5">
                             <h1>Chat</h1>
                             <input type="text" placeholder="Cari...">
                             <h4 style="color: #bebebe;">Tampilkan chat</h4>
                             <div class="row">
-                                <div class="col-3" >
+                                <div class="col-3">
                                     <img src="img/Foto_Profil.png" alt="">
                                 </div>
                                 <div class="col-9">
@@ -102,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3" >
+                                <div class="col-3">
                                     <img src="img/Foto_Profil.png" alt="">
                                 </div>
                                 <div class="col-9">
@@ -121,18 +147,20 @@
                         </div>
                         <div class="col-7" style="border-left: 1px solid #bebebe;">
                             <center><img src="img/packing.png" style="padding: 50px 50px;width: 50%;height: 50%px;margin: auto;" alt=""></center>
-                            <center><h2>Tidak ada Chat</h2></center>
+                            <center>
+                                <h2>Tidak ada Chat</h2>
+                            </center>
                         </div>
-                   </div>
-                 
-                </div>
-            </div> 
-        </div>   
-    </div>
-    
-     <!-- Modal -->
+                    </div>
 
-     <div id="mdl-filter" class="modal" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div id="mdl-filter" class="modal" style="display: none;">
         <div class="mdl-content">
             <span class="close" id="close" name="close">&times;</span><br>
             <h2>Filter</h2>
@@ -158,7 +186,7 @@
                         <input type="number" name="" id="" placeholder="0">
                     </div>
                 </div>
-                
+
                 <br><br>
                 <input type="submit" class="btn-simpan" value="TERAPKAN" name="" id="">
             </form>
@@ -167,7 +195,6 @@
     </div>
 
     <script type="text/javascript">
-        
         var span = document.getElementsByName("close")[0];
         var filter = document.getElementById("mdl-filter");
         var close = document.getElementById("close");
@@ -179,39 +206,40 @@
         var overlay = document.getElementById("overlay");
         var aktif = document.getElementsByClassName("active");
 
-        
+
         function showFilter() {
             filter.style.display = "block";
         }
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
             filter.style.display = "none";
         }
-        close.onclick = function () {
+        close.onclick = function() {
             filter.style.display = "none";
         }
-        
+
         function showtoggle() {
             document.getElementById("toggle").style.display = "block";
             document.getElementById("toggle").style.top = -200;
             overlay.classList.toggle("active");
         }
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 filter.style.display = "none";
             }
-            
+
         }
-        overlay.onclick = function (event) {
+        overlay.onclick = function(event) {
             overlay.classList.remove("active");
             document.getElementById("toggle").style.display = "none";
             document.getElementById("toggle").style.top = -200;
         }
+
         function showProduct() {
             detail.style.display = "block";
         }
-    </script>                                                                                                                                                                                                                                  
+    </script>
 
 </body>
 <footer>
@@ -219,8 +247,10 @@
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
     </div>
 </footer>
+
 </html>
