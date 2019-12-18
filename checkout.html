@@ -13,25 +13,62 @@
     <div class="navbar">
         <div class="navleft">
             <div class="logo">
-                    <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
+                <a href="index_after_login.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            <a  style="cursor: pointer;" onclick="showFilter()">Filter</a>
-            <div class="">
 
+            <div class="filter">
+                <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
             </div>
-            
+
         </div>
         <div class="navcenter">
             <input type="text" class="search" placeholder="Cari..">
         </div>
         <div class="navright">
-            <ul>
-                <li><a id="login" style="cursor: pointer;" href="masuk.html">Masuk</a></li>
-                <li><a href="daftar.html"><button>Daftar</button></a></li>
-            </ul>
+            <div class="bar" onclick="openSidebar()">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <button onclick="showtoggle()" id="profil" class="profile">Profil</button>
+                        <div id="toggle" class="toggle">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-toggle">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <ul>
+                                        <li class="list"><a href="user_akun.html" style="color: black !important;"> Profil</a></li>
+                                        <li class="list"> <a href="keranjang.html" style="color: black !important;"> Keranjang</a></li>
+                                        <li class="list"><a href="index.html" style="color: black !important;"> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="side-nav">
+            <a href="javascript:void(0)" class="closeSide" onclick="closeSidebar()">&times;</a>
+            <!-- <div class="img-foto-profil"> -->
+            <center>
+                <img class="" src="img/Foto_Profil.png">
+                <h3 style="color: #fff;">Username Saya</h3>
+            </center>
+
+            <!-- </div> -->
+            <a href="akun.html">Profil</a>
+            <a href="keranjang.html">Keranjang</a>
+            <a href="keranjang.html">Filter</a>
+            <a href="indes.html">Logout</a>
         </div>
     </div>
-
     <div class="main">
         <div class="row">
             <div class="col-12">
@@ -41,7 +78,7 @@
                     <li>Checkout</li>
                 </ul>
             </div>
-            
+
         </div>
         <div class="row">
             <div class="checkout">
@@ -68,9 +105,9 @@
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                        <img src="img/Sayur-Sawi.jpg" alt="">
+                                    <img src="img/Sayur-Sawi.jpg" alt="">
                                 </div>
-                                
+
                             </div>
                             <div class="col-6">
                                 <h4>Kangkung 1 ikat</h4>
@@ -78,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-4">
                     <div class="box" style="padding: 25px 25px;">
@@ -97,21 +134,21 @@
                         </div>
                         <hr>
                         <div class="row">
-                                <div class="col-6">
-                                    <p>Total Tagihan</p>
-                                </div>
-                                <div class="col-6">
-                                    <h3 class="harga">Rp. 6.000</h3>
-                                </div>
+                            <div class="col-6">
+                                <p>Total Tagihan</p>
                             </div>
+                            <div class="col-6">
+                                <h3 class="harga">Rp. 6.000</h3>
+                            </div>
+                        </div>
                         <br>
-                        <button class="btn-simpan" >Pesan</button>
+                        <button class="btn-simpan">Pesan</button>
                     </div>
-                    
+
                 </div>
             </div>
-            
-            
+
+
         </div>
     </div>
 
@@ -124,14 +161,14 @@
             <br>
             <button class="btn-alamat" onclick="addAlamatPengiriman()">Tambah Alamat Pengiriman</button>
             <div class="box">
-                        <hr>
-                        <br>
-                        <h2>Markonah</h2>
-                        <p>08983368286 <span style="color: #4CAF50;">(Alamat Utama)</span></p>
-                        <br>
-                        <p>Jl. Mastrip No.21 RT.23 RW.8 Kembang Bondowoso Kab. Bondowoso, 68219</p>
-                        <br> 
-                        <a style="cursor: pointer; color: #4CAF50; " onclick="addAlamatBaru()">Ubah alamat</a>
+                <hr>
+                <br>
+                <h2>Markonah</h2>
+                <p>08983368286 <span style="color: #4CAF50;">(Alamat Utama)</span></p>
+                <br>
+                <p>Jl. Mastrip No.21 RT.23 RW.8 Kembang Bondowoso Kab. Bondowoso, 68219</p>
+                <br>
+                <a style="cursor: pointer; color: #4CAF50; " onclick="addAlamatBaru()">Ubah alamat</a>
             </div>
         </div>
     </div>
@@ -142,35 +179,35 @@
             <hr>
             <br>
             <form class="add-alamat">
-                      <label>Label Alamat</label><br>
-                      <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap Anda"><br>
-                      <label>Tulis Nama Penerima</label><br>
-                      <input type="text" name="Email" placeholder="Tulis Nama Penerima"><br>
-                      <label>Tulis Nomor Telepon</label><br>
-                      <input type="number" name="number" placeholder="Tulis Nomor Telepon"><br>
-                      <label>Kota / Kecamatan</label><br>
-                      <input type="text" name="Email" placeholder="Tulis Nama Kota / Kecamatan"><br>
-                      <label>Alamat</label><br>
-                      <textarea rows="3" placeholder="si dengan nama jalan, nomor rumah atau nama gedung"></textarea>
-                      <label>Kode Pos</label><br>
-                      <input type="number" name="number" placeholder="Isi Kode Pos"><br>
-                      <div class="row" style="overflow: hidden;">
-                            <div class="col-1">
-                                <div class="cek">
-                                    <label class="contain"> 
+                <label>Label Alamat</label><br>
+                <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap Anda"><br>
+                <label>Tulis Nama Penerima</label><br>
+                <input type="text" name="Email" placeholder="Tulis Nama Penerima"><br>
+                <label>Tulis Nomor Telepon</label><br>
+                <input type="number" name="number" placeholder="Tulis Nomor Telepon"><br>
+                <label>Kota / Kecamatan</label><br>
+                <input type="text" name="Email" placeholder="Tulis Nama Kota / Kecamatan"><br>
+                <label>Alamat</label><br>
+                <textarea rows="3" placeholder="si dengan nama jalan, nomor rumah atau nama gedung"></textarea>
+                <label>Kode Pos</label><br>
+                <input type="number" name="number" placeholder="Isi Kode Pos"><br>
+                <div class="row" style="overflow: hidden;">
+                    <div class="col-1">
+                        <div class="cek">
+                            <label class="contain"> 
                                         <input type="checkbox">
                                         <span class="check"></span>
                                     </label>
-                                </div>
-                                
-                            </div>
-                            <div class="col-11">
-                                <p style="padding: 16px 25px 12px 0; display: inline-block; margin-left: 20px;">Jadikan alamat utama</p>
-                            </div>
                         </div>
-                    <input type="submit" class="btn-simpan" value="SIMPAN" name="" id="">
-                    <button class="btn-alamat">Cancel</button>
-                </form>
+
+                    </div>
+                    <div class="col-11">
+                        <p style="padding: 16px 25px 12px 0; display: inline-block; margin-left: 20px;">Jadikan alamat utama</p>
+                    </div>
+                </div>
+                <input type="submit" class="btn-simpan" value="SIMPAN" name="" id="">
+                <button class="btn-alamat">Cancel</button>
+            </form>
         </div>
     </div>
     <div id="mdl-alamatPengiriman" class="modal-address" style="display: none;">
@@ -215,12 +252,14 @@
 
         <hr class="dashed">
         <h3 class="logo-footer">Kang Sayur</h3>
-    
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, accusamus blanditiis at veniam, dicta atque esse molestiae repudiandae beatae laudantium fugiat porro ut. Alias impedit minus voluptate temporibus! Amet? Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Adipisci, asperiores? Et voluptatibus harum quisquam itaque fuga necessitatibus fugiat blanditiis rerum atque. Necessitatibus, aut autem ipsa voluptates unde laborum amet consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus distinctio quas delectus aspernatur quo ipsum. Alias adipisci, ea eaque repudiandae labore deleniti, voluptatum ab provident incidunt exercitationem quas natus.</p>
-    
+
     </footer>
 </body>
+
 </html>
 <script type="text/javascript">
     var alamat = document.getElementById('mdl-alamat');
@@ -229,31 +268,33 @@
     var alamatBaru = document.getElementById('mdl-alamatbaru');
     var alamatPengiriman = document.getElementById('mdl-alamatPengiriman')
 
-    function addAlamat(){
+    function addAlamat() {
         alamat.style.display = "block";
     }
-    function addAlamatBaru(){
+
+    function addAlamatBaru() {
         alamatPengiriman.style.display = "none";
         alamatBaru.style.display = "block";
         alamat.style.display = "none";
     }
-    function addAlamatPengiriman(){
-        alamatBaru.style.display= "block"; 
+
+    function addAlamatPengiriman() {
+        alamatBaru.style.display = "block";
     }
-    window.onclick= function(event){
-        if (event.target==alamat){
+    window.onclick = function(event) {
+        if (event.target == alamat) {
             alamat.style.display = "none";
-            alamatBaru.style.display= "none";
-            alamatPengiriman.style.display= "none";
+            alamatBaru.style.display = "none";
+            alamatPengiriman.style.display = "none";
         }
     }
-    close.onclick= function(){
+    close.onclick = function() {
         alamat.style.display = "none";
-        
+
     }
-    close2.onclick= function(){
+    close2.onclick = function() {
         alamat.style.display = "block";
-        alamatBaru.style.display= "none";
-        alamatPengiriman.style.display= "none";
+        alamatBaru.style.display = "none";
+        alamatPengiriman.style.display = "none";
     }
 </script>

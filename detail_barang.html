@@ -16,9 +16,9 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo_kang.png" alt=""></a>
             </div>
-            <a style="cursor: pointer;" onclick="showFilter()">Filter</a>
-            <div class="">
 
+            <div class="filter">
+                <a style="cursor: pointer;" onClick="showFilter()">Filter</a>
             </div>
 
         </div>
@@ -26,10 +26,48 @@
             <input type="text" class="search" placeholder="Cari..">
         </div>
         <div class="navright">
-            <ul>
-                <li><a id="login" style="cursor: pointer;" href="masuk.html">Masuk</a></li>
-                <li><a href="daftar.html"><button>Daftar</button></a></li>
-            </ul>
+            <div class="bar" onclick="openSidebar()">
+                <center>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </center>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
+                        <div id="toggle" class="toggle">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-toggle">
+                                        <h5>Nama User</h5>
+                                    </div>
+                                    <ul>
+                                        <li class="list"><a href="user_akun.html" style="color: black !important;"> Profil</a></li>
+                                        <li class="list">Keranjang</li>
+                                        <li class="list">Logout</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sidebar" class="side-nav">
+            <a href="javascript:void(0)" class="closeSide" onclick="closeSidebar()">&times;</a>
+            <!-- <div class="img-foto-profil"> -->
+            <center>
+                <img class="" src="img/Foto_Profil.png">
+                <h3 style="color: #fff;">Username Saya</h3>
+            </center>
+
+            <!-- </div> -->
+            <a href="akun.html">Profil</a>
+            <a href="keranjang.html">Keranjang</a>
+            <a href="keranjang.html">Filter</a>
+            <a href="indes.html">Logout</a>
         </div>
     </div>
 

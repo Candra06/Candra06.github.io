@@ -26,7 +26,7 @@
 
         </div>
         <div class="navcenter">
-            <input type="text" class="search" placeholder="Cari..">
+            <input type="text" id="search" class="search" placeholder="Cari..">
         </div>
 
         <div class="navright">
@@ -37,7 +37,7 @@
                     <div class="bar3"></div>
                 </center>
             </div>
-            <ul>
+            <ul style="margin-top: 7px;">
                 <li><a id="login" style="cursor: pointer;" onclick="showLogin()">Masuk</a></li>
                 <li><a class="btn-reg" href="daftar.html">Daftar</a></li>
                 <li><a class="li-filter" style="cursor: pointer; display: none;" onclick="showFilter()">Filter</a></li>
@@ -61,7 +61,7 @@
                         </center>
                     </div>
 
-                    <form action="">
+                    <form action="masuk.html">
                         <label>Nama Lengkap</label><br>
                         <input type="text" name="Nama Lengkap" placeholder="Nama Lengkap Anda" required><br>
                         <label>Email/Username</label><br>
@@ -73,7 +73,7 @@
                         <small style="color: red;display: none;" id="wrong">Password Tidak Sama</small><br>
                         <label>Nomor HP</label><br>
                         <input type="number" name="number" placeholder="Nomor HP anda" required><br>
-                        <input type="submit" class="btn-simpan" value="SIMPAN">
+                        <a href="masuk.html"><button type="submit" class="btn-simpan" >SIMPAN</button></a>
 
                         <div class="row">
                             <div class="col-hr-3">
