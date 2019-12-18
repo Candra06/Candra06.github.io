@@ -39,7 +39,7 @@
             <div class="sidebar">
                 <ul>
                     <li>
-                        <button onclick="showtoggle()" id="profil" class="profile">Profil</button>
+                        <a onclick="showtoggle()"><button id="profil" class="profile">Profil</button></a>
                         <div id="toggle" class="toggle">
                             <div class="row">
                                 <div class="col-12">
@@ -403,16 +403,20 @@
             x.classList.toggle("change");
         }
 
+        overlay.onclick = function(event) {
+            overlay.classList.remove("active");
+            document.getElementById("toggle").style.display = "none";
+            document.getElementById("toggle").style.top = -200;
+        }
+
         function showtoggle() {
             document.getElementById("toggle").style.display = "block";
             document.getElementById("toggle").style.top = -200;
             overlay.classList.toggle("active");
         }
+        window.onclick = function(event) {
 
-        overlay.onclick = function(event) {
-            overlay.classList.remove("active");
-            document.getElementById("toggle").style.display = "none";
-            document.getElementById("toggle").style.top = -200;
+
         }
 
         function showProduct() {
